@@ -1,0 +1,76 @@
+<section class="get-started-section">
+  <div class="get-started-container">
+    <div class="get-started-header">
+      <span class="get-started-eyebrow">Let's make it happen</span>
+  <h2 class="get-started-title"><span class="get-started-title-light">Ready to</span><br><span class="get-started-title-bold">Get started</span></h2>
+      <div class="get-started-tabs">
+        <button class="get-started-tab get-started-tab--active" data-tab="quote">Request a quote</button>
+        <button class="get-started-tab" data-tab="call">Book a call</button>
+      </div>
+    </div>
+    <div class="get-started-content">
+      <form class="get-started-form" id="get-started-form">
+        <div class="get-started-form-row">
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="email" name="email" placeholder="Business email" required>
+        </div>
+        <textarea name="message" placeholder="Tell us about your project" required></textarea>
+        <div class="get-started-form-row">
+          <select name="budget" required>
+            <option value="">Budget</option>
+            <option value="$5K - $10K">$5K - $10K</option>
+            <option value="$10K - $25K">$10K - $25K</option>
+            <option value="$25K - $50K">$25K - $50K</option>
+            <option value="$50K+">$50K+</option>
+          </select>
+        </div>
+        <div class="get-started-checkbox-group">
+          <span class="get-started-checkbox-label">How can we help you <span class="get-started-checkbox-required">*</span></span>
+          <label class="get-started-checkbox">
+            <input type="checkbox" name="help[]" value="Branding">
+            <span class="get-started-custom-checkbox"></span>
+            Branding
+          </label>
+          <label class="get-started-checkbox">
+            <input type="checkbox" name="help[]" value="Design">
+            <span class="get-started-custom-checkbox"></span>
+            Design
+          </label>
+          <label class="get-started-checkbox">
+            <input type="checkbox" name="help[]" value="Development">
+            <span class="get-started-custom-checkbox"></span>
+            Development
+          </label>
+        </div>
+  <button type="submit" class="site-btn">Send message</button>
+      </form>
+      <div class="get-started-call" style="display:none;">
+        <h3>No fluff, no filler — just results.</h3>
+        <p>We’ll discuss your goals, explore how we can enhance your brand’s digital experience, and provide expert insights on design, development, or strategy.<br><br>Let’s bring your vision to life!</p>
+        <div class="get-started-call-options">
+          <a href="#" class="site-btn">15 Min Meeting</a>
+          <a href="#" class="site-btn">30 Min Meeting</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// Simple tab switcher
+const tabs = document.querySelectorAll('.get-started-tab');
+const form = document.querySelector('.get-started-form');
+const call = document.querySelector('.get-started-call');
+tabs.forEach(tab => {
+  tab.addEventListener('click', function() {
+    tabs.forEach(t => t.classList.remove('get-started-tab--active'));
+    this.classList.add('get-started-tab--active');
+    if (this.dataset.tab === 'quote') {
+      form.style.display = '';
+      call.style.display = 'none';
+    } else {
+      form.style.display = 'none';
+      call.style.display = '';
+    }
+  });
+});
+</script>

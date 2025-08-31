@@ -3,5 +3,30 @@ layout: base.njk
 title: Home Page
 ---
 
-<h2>Welcome to my static site!</h2>
-<p>This is my first page built with Eleventy and Nunjucks.</p>
+<section class="hero-section">
+	<video class="hero-bg-video" autoplay loop muted playsinline poster="https://www.w3schools.com/howto/img_snow_wide.jpg">
+		<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<div class="framer-8a9miy" data-framer-appear-id="8a9miy" data-framer-name="Hero Content Block" style="opacity: 1; transform: none; will-change: transform;">
+		<div class="framer-14zcntt" data-framer-name="Hero text Block">
+			<div class="framer-1e96h50" data-framer-name="Title + Subtitle">
+				<div class="framer-z9sfzs" data-framer-name="Title + Underline">
+					<div class="ssr-variant hidden-1qys3w0 hidden-xsh6zi hidden-li12xm">
+						{% include "hero/hero-title.njk" %}
+					</div>
+					{% include "hero/hero-subcopy.njk" %}
+				</div>
+			</div>
+			{% include "hero/hero-button.njk" %}
+		</div>
+	</div>
+</section>
+{% include "brand-grid.njk" %}
+{% include "vertical-panels.njk" %}
+{% include "mainpanels.njk" %}
+{% include "case-studies.njk" %}
+{% include "testimonials.njk" %}
+{% include "get-started.njk" %}
+{% include "connect.njk" %}
+{% include "footer.njk" %}

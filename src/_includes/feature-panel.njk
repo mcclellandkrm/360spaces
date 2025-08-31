@@ -1,0 +1,64 @@
+<section class="feature-panel-section">
+  <div class="feature-panel-wrapper">
+    <!-- Main large panel -->
+    <div class="feature-panel" id="feature-panel">
+      <div class="feature-panel-content">
+        <h3>Virtual tours are becoming a critical tool</h3>
+        <p>offering benefits that extend far beyond simple marketing. For medium to high-level management, from marketing and business development to operations and planning, a virtual tour provides a dynamic and multi-faceted asset.</p>
+  <a class="site-btn" href="#0">Learn more <span>&rarr;</span></a>
+      </div>
+      <div class="feature-panel-visual">
+        <img src="https://raw.githubusercontent.com/mcclellandkrm/360spaces-assets/main/feature-image-01.png" width="400" height="320" alt="Feature 01" />
+      </div>
+      <div class="feature-panel-glow" id="feature-panel-glow"></div>
+    </div>
+    <!-- Two smaller panels below -->
+    <div class="feature-panel-row">
+      <!-- Left panel -->
+      <div class="feature-panel feature-panel-small" id="feature-panel-2">
+        <div class="feature-panel-content">
+          <h3>Extensibility</h3>
+          <p>Your login box must find the right balance between user convenience, privacy and security.</p>
+        </div>
+        <div class="feature-panel-visual">
+          <img src="https://raw.githubusercontent.com/mcclellandkrm/360spaces-assets/main/feature-image-02.png" width="320" height="180" alt="Feature 02" />
+        </div>
+        <div class="feature-panel-glow" id="feature-panel-glow-2"></div>
+      </div>
+      <!-- Right panel -->
+      <div class="feature-panel feature-panel-small" id="feature-panel-3">
+        <div class="feature-panel-content">
+          <h3>Infinite options</h3>
+          <p>Quickly apply filters to refine your issues lists and create custom views.</p>
+        </div>
+        <div class="feature-panel-visual">
+          <img src="https://raw.githubusercontent.com/mcclellandkrm/360spaces-assets/main/feature-image-03.png" width="180" height="180" alt="Feature 03" />
+        </div>
+        <div class="feature-panel-glow" id="feature-panel-glow-3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// Mouse-follow glow effect for all feature panels
+function addPanelGlow(panelId, glowId) {
+  const panel = document.getElementById(panelId);
+  const glow = document.getElementById(glowId);
+  if(panel && glow) {
+    panel.addEventListener('mousemove', function(e) {
+      const rect = panel.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      glow.style.setProperty('--x', `${x}px`);
+      glow.style.setProperty('--y', `${y}px`);
+    });
+    panel.addEventListener('mouseleave', function() {
+      glow.style.setProperty('--x', `50%`);
+      glow.style.setProperty('--y', `50%`);
+    });
+  }
+}
+addPanelGlow('feature-panel', 'feature-panel-glow');
+addPanelGlow('feature-panel-2', 'feature-panel-glow-2');
+addPanelGlow('feature-panel-3', 'feature-panel-glow-3');
+</script>

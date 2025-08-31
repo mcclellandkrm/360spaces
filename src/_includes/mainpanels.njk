@@ -1,0 +1,81 @@
+<section class="mainpanels-section">
+  <div class="mainpanels-wrapper">
+    <!-- Top panel -->
+    <div class="mainpanel mainpanel-large" id="mainpanel-1">
+      <div class="mainpanel-content">
+        <h3>Marketing and Business Development</h3>
+        <p>Virtual tours are no longer just a novelty; they are a strategic asset that transforms how you attract, engage, and convert your audience...</p>
+  <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
+      </div>
+      <div class="mainpanel-visual">
+  <img src="images/graphic1.png" width="400" height="320" alt="Graphic 1" style="margin-bottom:1rem;" />
+      </div>
+      <div class="mainpanel-glow" id="mainpanel-glow-1"></div>
+      <div class="mainpanel-edge"></div>
+    </div>
+    <!-- Middle row: two panels -->
+    <div class="mainpanels-row">
+      <div class="mainpanel mainpanel-small" id="mainpanel-2">
+        <div class="mainpanel-content">
+          <h3>Operational Efficiency & Planning</h3>
+          <p>For management, a virtual tour is far more than a marketing tool—it's a strategic asset that transforms internal operations.</p>
+          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
+        </div>
+        <div class="mainpanel-visual">
+          <img src="images/graphic1.png" width="320" height="180" alt="Feature 02" />
+        </div>
+        <div class="mainpanel-glow" id="mainpanel-glow-2"></div>
+        <div class="mainpanel-edge"></div>
+      </div>
+      <div class="mainpanel mainpanel-small" id="mainpanel-3">
+        <div class="mainpanel-content">
+          <h3>Customer Experience & Accessibility</h3>
+          <p>In today's market, customer experience is your greatest differentiator. A virtual tour is a powerful tool for building trust and loyalty by making your space more transparent, more accessible, and more welcoming to everyone.</p>
+          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
+        </div>
+        <div class="mainpanel-visual">
+          <img src="images/graphic1.png" width="180" height="180" alt="Feature 03" />
+        </div>
+        <div class="mainpanel-glow" id="mainpanel-glow-3"></div>
+        <div class="mainpanel-edge"></div>
+      </div>
+    </div>
+    <!-- Bottom panel -->
+    <div class="mainpanel mainpanel-large" id="mainpanel-4">
+      <div class="mainpanel-content">
+        <h3>Sector-Specific Applications</h3>
+        <p>Every industry has unique challenges and goals. While the core benefits of a virtual tour, from enhanced marketing to improved operations, are universal, we understand that a one-size-fits-all approach doesn't work.</p>
+          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
+      </div>
+      <div class="mainpanel-visual">
+  <img src="images/graphic1.png" width="400" height="320" alt="Feature 04" />
+      </div>
+      <div class="mainpanel-glow" id="mainpanel-glow-4"></div>
+      <div class="mainpanel-edge"></div>
+    </div>
+  </div>
+</section>
+<script>
+// Mouse-follow glow effect for all main panels
+function addMainPanelGlow(panelId, glowId) {
+  const panel = document.getElementById(panelId);
+  const glow = document.getElementById(glowId);
+  if(panel && glow) {
+    panel.addEventListener('mousemove', function(e) {
+      const rect = panel.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      glow.style.setProperty('--x', `${x}px`);
+      glow.style.setProperty('--y', `${y}px`);
+    });
+    panel.addEventListener('mouseleave', function() {
+      glow.style.setProperty('--x', `50%`);
+      glow.style.setProperty('--y', `50%`);
+    });
+  }
+}
+addMainPanelGlow('mainpanel-1', 'mainpanel-glow-1');
+addMainPanelGlow('mainpanel-2', 'mainpanel-glow-2');
+addMainPanelGlow('mainpanel-3', 'mainpanel-glow-3');
+addMainPanelGlow('mainpanel-4', 'mainpanel-glow-4');
+</script>
