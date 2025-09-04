@@ -1,0 +1,139 @@
+---
+layout: base.njk
+title: "Limavady High School - Virtual Tour Case Study"
+description: "How 360° virtual tours transformed student engagement and accessibility at Limavady High School"
+client: "Limavady High School"
+service: "Educational Virtual Tours"
+sector: "Education"
+heroImage: "images/limavady-1.png"
+secondaryImage: "images/limavady-2.png"
+testimonialQuote: "The virtual tour has transformed how we engage with prospective families. It's increased our reach significantly and allows parents and students to get a genuine feel for our school environment before they visit."
+testimonialAuthor: "Sarah Mitchell"
+testimonialTitle: "Head of Admissions, Limavady High School"
+stats:
+  - number: "150%"
+    label: "Increase in Virtual Visits"
+  - number: "40%"
+    label: "Reduction in Physical Tour Requests"
+  - number: "85%"
+    label: "User Satisfaction Rating"
+tags: ["case-studies", "education", "virtual-tours"]
+permalink: "/case-studies/limavady-high-school/"
+---
+
+<section class="luxury-case-study">
+  <div
+    class="luxury-case-study-container">
+    <!-- Hero Header Section -->
+    <div class="luxury-case-study-hero">
+      <div class="luxury-case-study-meta">
+        <span class="luxury-case-study-badge">Case Study</span>
+        <div class="luxury-case-study-details">
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Client</span>
+            <span class="luxury-detail-value">{{ client }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Service</span>
+            <span class="luxury-detail-value">{{ service }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Sector</span>
+            <span class="luxury-detail-value">{{ sector }}</span>
+          </div>
+        </div>
+      </div>
+      <h1 class="luxury-case-study-title">Transforming Education: Virtual Tours at
+      {{ client }}</h1>
+      <p class="luxury-case-study-subtitle">{{ description }}</p>
+    </div>
+    <!-- Main Image Section -->
+    <div class="luxury-case-study-image">
+      <img src="{{ heroImage }}" alt="{{ client }} Virtual Tour"/>
+      <div class="luxury-image-overlay"></div>
+    </div>
+    <!-- Project Description -->
+    <div class="luxury-case-study-content">
+      <div class="luxury-content-section">
+        <h2>Project Overview</h2>
+        <p>{{ client }} partnered with 360spaces to create an immersive virtual tour experience that showcases their
+          state-of-the-art facilities, vibrant learning environments, and unique educational atmosphere. This comprehensive
+          digital solution allows prospective students and families to explore the school from anywhere, at any time.</p>
+        <p>The virtual tour captures every aspect of school life - from modern classrooms and science laboratories to sports
+          facilities and common areas - providing an authentic feel for what makes
+          {{ client }} a premier educational destination.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>The Challenge</h2>
+        <p>Like many educational institutions, {{ client }} faced the challenge of effectively showcasing their facilities to
+          prospective students and families who couldn't always visit in person. Traditional photography and brochures couldn't
+          capture the full scale and atmosphere of their impressive campus.</p>
+        <p>The school needed a solution that would increase accessibility, reduce the burden on staff for individual tours, and
+          provide a compelling digital experience that truly represented their educational excellence.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>Our Solution</h2>
+        <p>We developed a comprehensive virtual tour that brings {{ client }}'s campus to life through cutting-edge 360°
+          technology. The solution includes:</p>
+        <ul class="luxury-feature-list">
+          <li>Interactive navigation through all key areas of the school</li>
+          <li>Integrated multimedia content including videos and information points</li>
+          <li>Mobile-responsive design for access on any device</li>
+          <li>Accessibility features ensuring inclusive access for all users</li>
+          <li>Seamless integration with the school's existing website</li>
+        </ul>
+      </div>
+      <!-- Testimonial Section -->
+      <div class="luxury-testimonial-section">
+        <div class="luxury-testimonial-content">
+          <blockquote class="luxury-testimonial-quote">{{ testimonialQuote }}</blockquote>
+          <div class="luxury-testimonial-author">
+            <div class="luxury-author-info">
+              <span class="luxury-author-name">{{ testimonialAuthor }}</span>
+              <span class="luxury-author-title">{{ testimonialTitle }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Results Section -->
+      <div class="luxury-content-section">
+        <h2>Results</h2>
+        <div class="luxury-results-grid">
+          {% for stat in stats %}
+            <div class="luxury-result-stat">
+              <div class="luxury-stat-number">{{ stat.number }}</div>
+              <div class="luxury-stat-label">{{ stat.label }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Additional Image -->
+      {% if secondaryImage %}
+        <div class="luxury-case-study-image luxury-secondary-image">
+          <img src="{{ secondaryImage }}" alt="{{ client }} Additional View"/>
+          <div class="luxury-image-caption">
+            <p>Students and families can explore modern classrooms and specialized learning spaces through our immersive virtual
+              tour experience.</p>
+          </div>
+        </div>
+      {% endif %}
+      <!-- Call to Action -->
+      <div class="luxury-case-study-cta">
+        <h3>Ready to Transform Your Institution?</h3>
+        <p>See how 360° virtual tours can enhance your educational environment and improve accessibility for prospective
+          students and families.</p>
+        <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="luxury-cta-button" target="_blank" rel="noopener">
+          <span>Schedule a Consultation</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

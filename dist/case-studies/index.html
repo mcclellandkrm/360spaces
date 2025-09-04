@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Case Studies - 360spaces</title>
+    <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" class="navbar__logo">
+            <img src="/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
+            <img src="/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
+        </a>
+        <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
+            <span class="navbar__hamburger"></span>
+            <span class="navbar__hamburger"></span>
+            <span class="navbar__hamburger"></span>
+        </button>
+        <div class="navbar__menu-wrapper" id="navbar-menu">
+            <ul class="navbar__menu">
+                <li>
+                    <a href="#" class="navbar__link">Main Focus +</a>
+                </li>
+                <li>
+                    <a href="/case-studies/" class="navbar__link">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar__link">Careers</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar__link">Projects</a>
+                </li>
+            </ul>
+            <ul class="navbar__actions">
+                <li>
+                    <a href="#" class="site-btn">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.navbar__toggle');
+    const navMenu = document.getElementById('navbar-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', ! expanded);
+            navMenu.classList.toggle('navbar__menu--open');
+        });
+    }
+</script>
+        <main>
+            
+<section class="luxury-case-studies-index">
+    <div
+        class="luxury-case-studies-container">
+        <!-- Hero Section -->
+        <div class="luxury-case-studies-hero">
+            <h1 class="luxury-case-studies-title">Case Studies</h1>
+            <p class="luxury-case-studies-subtitle">
+                Discover how we've transformed businesses across industries with immersive 360° experiences. From education to retail,
+                see real results from real clients.
+            </p>
+        </div>
+        <!-- Case Studies Grid -->
+        <div class="luxury-case-studies-grid">
+            
+            
+                <article class="luxury-case-study-card">
+                    <div class="luxury-case-study-card-image">
+                        <img src="images/limavady-1.png" alt="Limavady High School Case Study"/>
+                        <div class="luxury-case-study-card-overlay">
+                            <span class="luxury-case-study-sector">Education</span>
+                        </div>
+                    </div>
+                    <div class="luxury-case-study-card-content">
+                        <h2 class="luxury-case-study-card-title">Limavady High School</h2>
+                        <p class="luxury-case-study-card-service">Educational Virtual Tours</p>
+                        <p class="luxury-case-study-card-description">How 360° virtual tours transformed student engagement and accessibility at Limavady High School</p>
+                        <a href="/case-studies/limavady-high-school/" class="luxury-case-study-card-link">
+                            <span>Read Case Study</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            
+                <article class="luxury-case-study-card">
+                    <div class="luxury-case-study-card-image">
+                        <img src="images/oneills-1.png" alt="O&#39;Neill&#39;s Sports Case Study"/>
+                        <div class="luxury-case-study-card-overlay">
+                            <span class="luxury-case-study-sector">Retail</span>
+                        </div>
+                    </div>
+                    <div class="luxury-case-study-card-content">
+                        <h2 class="luxury-case-study-card-title">O&#39;Neill&#39;s Sports</h2>
+                        <p class="luxury-case-study-card-service">Retail Virtual Tours</p>
+                        <p class="luxury-case-study-card-description">How immersive 360° retail experiences increased customer engagement and online sales for O&#39;Neill&#39;s Sports</p>
+                        <a href="/case-studies/oneills-retail/" class="luxury-case-study-card-link">
+                            <span>Read Case Study</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            
+                <article class="luxury-case-study-card">
+                    <div class="luxury-case-study-card-image">
+                        <img src="images/hastings-1.png" alt="Hastings Hotels Case Study"/>
+                        <div class="luxury-case-study-card-overlay">
+                            <span class="luxury-case-study-sector">Hospitality</span>
+                        </div>
+                    </div>
+                    <div class="luxury-case-study-card-content">
+                        <h2 class="luxury-case-study-card-title">Hastings Hotels</h2>
+                        <p class="luxury-case-study-card-service">Hospitality Virtual Tours</p>
+                        <p class="luxury-case-study-card-description">How luxury 360° virtual tours increased bookings and enhanced guest experience for Hastings Hotels</p>
+                        <a href="/case-studies/hastings-hotels/" class="luxury-case-study-card-link">
+                            <span>Read Case Study</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            
+        </div>
+        <!-- Call to Action -->
+        <div class="luxury-case-studies-cta">
+            <h2>Ready to Create Your Success Story?</h2>
+            <p>Join our growing list of satisfied clients who've transformed their business with immersive virtual experiences.</p>
+            <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="luxury-cta-button" target="_blank" rel="noopener">
+                <span>Start Your Project</span>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7 17L17 7M17 7H7M17 7V17"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+        </main>
+    </body>
+</html>

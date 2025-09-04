@@ -1,0 +1,135 @@
+---
+layout: base.njk
+title: "Hastings Hotels Virtual Experience - 360spaces Case Study"
+description: "How luxury 360° virtual tours increased bookings and enhanced guest experience for Hastings Hotels"
+client: "Hastings Hotels"
+service: "Hospitality Virtual Tours"
+sector: "Hospitality"
+heroImage: "images/hastings-1.png"
+secondaryImage: "images/hastings-2.png"
+testimonialQuote: "The virtual tours have transformed how guests discover our properties. They arrive already excited about their stay, having explored our facilities and amenities in detail beforehand."
+testimonialAuthor: "Emma Thompson"
+testimonialTitle: "Marketing Director, Hastings Hotels"
+stats:
+  - number: "180%"
+    label: "Increase in Direct Bookings"
+  - number: "45%"
+    label: "Longer Average Stay Duration"
+  - number: "92%"
+    label: "Guest Satisfaction Score"
+tags: ["case-studies", "hospitality", "virtual-tours"]
+permalink: "/case-studies/hastings-hotels/"
+---
+
+<section class="luxury-case-study">
+  <div
+    class="luxury-case-study-container">
+    <!-- Hero Header Section -->
+    <div class="luxury-case-study-hero">
+      <div class="luxury-case-study-meta">
+        <span class="luxury-case-study-badge">Case Study</span>
+        <div class="luxury-case-study-details">
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Client</span>
+            <span class="luxury-detail-value">{{ client }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Service</span>
+            <span class="luxury-detail-value">{{ service }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Sector</span>
+            <span class="luxury-detail-value">{{ sector }}</span>
+          </div>
+        </div>
+      </div>
+      <h1 class="luxury-case-study-title">Elevating Hospitality: {{ client }}'s Virtual Guest Experience</h1>
+      <p class="luxury-case-study-subtitle">{{ description }}</p>
+    </div>
+    <!-- Main Image Section -->
+    <div class="luxury-case-study-image">
+      <img src="{{ heroImage }}" alt="{{ client }} Virtual Tour"/>
+      <div class="luxury-image-overlay"></div>
+    </div>
+    <!-- Project Description -->
+    <div class="luxury-case-study-content">
+      <div class="luxury-content-section">
+        <h2>Project Overview</h2>
+        <p>{{ client }} collaborated with 360spaces to showcase their luxury hotel properties through immersive virtual
+          experiences. This comprehensive digital solution allows potential guests to explore rooms, amenities, and facilities in
+          stunning detail before making their booking decision.</p>
+        <p>The virtual tours capture the elegance and unique character of each {{ client }} property, from historic charm to
+          modern luxury, providing an authentic preview that builds excitement and confidence in their booking choice.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>The Challenge</h2>
+        <p>In the competitive hospitality market, {{ client }} needed to differentiate their properties and reduce booking
+          uncertainty. Traditional photos couldn't convey the true atmosphere, scale, and luxury feel of their venues.</p>
+        <p>They required a solution that would showcase their properties' unique selling points, reduce booking anxiety, and
+          ultimately increase direct reservations while decreasing reliance on third-party booking platforms.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>Our Solution</h2>
+        <p>We developed immersive virtual experiences that showcase {{ client }}'s hospitality excellence:</p>
+        <ul class="luxury-feature-list">
+          <li>Room-by-room virtual tours with multiple accommodation options</li>
+          <li>Interactive exploration of dining venues and leisure facilities</li>
+          <li>Integration with booking systems for seamless reservations</li>
+          <li>Mobile-responsive design for travel planning on any device</li>
+          <li>Multi-language support for international guests</li>
+        </ul>
+      </div>
+      <!-- Testimonial Section -->
+      <div class="luxury-testimonial-section">
+        <div class="luxury-testimonial-content">
+          <blockquote class="luxury-testimonial-quote">{{ testimonialQuote }}</blockquote>
+          <div class="luxury-testimonial-author">
+            <div class="luxury-author-info">
+              <span class="luxury-author-name">{{ testimonialAuthor }}</span>
+              <span class="luxury-author-title">{{ testimonialTitle }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Results Section -->
+      <div class="luxury-content-section">
+        <h2>Results</h2>
+        <div class="luxury-results-grid">
+          {% for stat in stats %}
+            <div class="luxury-result-stat">
+              <div class="luxury-stat-number">{{ stat.number }}</div>
+              <div class="luxury-stat-label">{{ stat.label }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Additional Image -->
+      {% if secondaryImage %}
+        <div class="luxury-case-study-image luxury-secondary-image">
+          <img src="{{ secondaryImage }}" alt="{{ client }} Additional View"/>
+          <div class="luxury-image-caption">
+            <p>Guests can explore luxury accommodations and hotel amenities through our immersive virtual experience, building
+              confidence in their booking decision.</p>
+          </div>
+        </div>
+      {% endif %}
+      <!-- Call to Action -->
+      <div class="luxury-case-study-cta">
+        <h3>Ready to Elevate Your Guest Experience?</h3>
+        <p>Discover how 360° virtual tours can showcase your hospitality offerings and increase direct bookings through
+          immersive experiences.</p>
+        <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="luxury-cta-button" target="_blank" rel="noopener">
+          <span>Schedule a Consultation</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

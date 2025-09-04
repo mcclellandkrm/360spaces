@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <nav class="navbar">
     <div class="navbar__container">
-        <a href="index.html" class="navbar__logo">
-            <img src="images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full" />
-            <img src="images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans" />
+        <a href="/" class="navbar__logo">
+            <img src="/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
+            <img src="/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
         </a>
         <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
             <span class="navbar__hamburger"></span>
@@ -20,624 +20,757 @@
         </button>
         <div class="navbar__menu-wrapper" id="navbar-menu">
             <ul class="navbar__menu">
-                <li><a href="#" class="navbar__link">Our services +</a></li>
-                <li><a href="#" class="navbar__link">About</a></li>
-                <li><a href="#" class="navbar__link">Careers</a></li>
-                <li><a href="#" class="navbar__link">Contact us</a></li>
+                <li>
+                    <a href="#" class="navbar__link">Main Focus +</a>
+                </li>
+                <li>
+                    <a href="/case-studies/" class="navbar__link">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar__link">Careers</a>
+                </li>
+                <li>
+                    <a href="#" class="navbar__link">Projects</a>
+                </li>
             </ul>
             <ul class="navbar__actions">
-                <li><a href="#" class="site-btn">Contact us</a></li>
+                <li>
+                    <a href="#" class="site-btn">Contact us</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 <script>
-// Hamburger menu toggle
-const navToggle = document.querySelector('.navbar__toggle');
-const navMenu = document.getElementById('navbar-menu');
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function() {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !expanded);
-        navMenu.classList.toggle('navbar__menu--open');
-    });
-}
+    // Hamburger menu toggle
+    const navToggle = document.querySelector('.navbar__toggle');
+    const navMenu = document.getElementById('navbar-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', ! expanded);
+            navMenu.classList.toggle('navbar__menu--open');
+        });
+    }
 </script>
         <main>
             
 <section class="hero-section">
-	<video class="hero-bg-video" autoplay loop muted playsinline poster="https://www.w3schools.com/howto/img_snow_wide.jpg">
-		<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	<div class="framer-8a9miy" data-framer-appear-id="8a9miy" data-framer-name="Hero Content Block" style="opacity: 1; transform: none; will-change: transform;">
-		<div class="framer-14zcntt" data-framer-name="Hero text Block">
-			<div class="framer-1e96h50" data-framer-name="Title + Subtitle">
-				<div class="framer-z9sfzs" data-framer-name="Title + Underline">
-					<div class="ssr-variant hidden-1qys3w0 hidden-xsh6zi hidden-li12xm">
-						<h1 class="heading-light">Virtual Tour Framework</h1>
-					</div>
-					<p>testing the text here ligned with your audience's needs,<br>you're losing those all-important conversions every day.</p>
-<p class="bold">We'll help you create that alignment, with strategic design solutions<br>that naturally guide your audience toward taking action.</p>
-
-				</div>
-			</div>
-			<a class="site-btn" href="https://cal.com/allyoucan/30min" target="_blank" rel="noopener">
-  <img class="hero-avatar" src="https://framerusercontent.com/images/imJDZjVg5EZZ2VxNu5rnw1H7t8.png" alt="Marc avatar">
-  Book a Call with Marc
-</a>
-
-		</div>
-	</div>
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="video/hero-video.mp4" type="video/mp4"> Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="heading-light">Transform your business with a virtual tour</h1>
+        <div class="hero-subcopy">
+            <p>Unlock new possibilities with a custom virtual tour<br>For over 12 years, we've helped leading brands and local
+                businesses create powerful digital experiences, from immersive Google tours to detailed virtual twins for space
+                management and internal training.</p>
+            <p>Whatever your sector, we deliver innovative, tailored solutions that help you save time, improve efficiency, and
+                engage your audience.</p>
+        </div>
+        <a class="site-btn" href="https://cal.com/karl-mcclelland-m2ppu8/" target="_blank" rel="noopener">
+            <img class="hero-avatar" src="images/karlprofile.jpg" alt="Karl avatar"> Book a Call with Karl
+        </a>
+    </div>
 </section>
-<div class="lazyblock-client-logos-Z1UP84z wp-block-lazyblock-client-logos">
-    <div class="client-logos-container">
-        <ul class="px-0 mb-0">
-            <li class="mb-0">
-                <!-- Boots logo -->
-                <img src="/images/clientlogos/Boots.svg" alt="Boots" width="120">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Northern_Ireland_Screen_29_Fixed.webp" alt="Boots Alternative" width="130" height="34">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Decathlon.svg" alt="Decathlon" width="100" height="100">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Game-of-Thrones.svg" alt="Game of Thrones" width="463" height="56">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/fitzwilliam-hotel-grey.png" alt="Hilti" width="216" height="62">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Victim-Support-NI-logo.png" alt="NI Screen" width="638" height="319">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Education-Authority-logo.png" alt="SSE Arena" width="1701" height="212">
-            </li>
-            <li class="mb-0">
-                <img src="/images/clientlogos/Aston-Martin-logo.png" alt="W5 Belfast" width="336" height="64">
-            </li>
-        </ul>
+<section class="luxury-client-showcase">
+    <div class="luxury-client-container">
+        <div class="luxury-client-header">
+            <h2 class="luxury-client-title">Trusted by Industry Leaders</h2>
+            <p class="luxury-client-subtitle">Forward-thinking managers, brands and organisations trust us to create high-impact
+                virtual tours that showcase, plan, and transform their spaces.</p>
+        </div>
+        <!-- Luxury Scrolling Logo Carousel -->
+        <div class="luxury-logo-carousel">
+            <div
+                class="luxury-logo-track">
+                <!-- Row 1: Premium Brands -->
+                <div class="luxury-logo-row luxury-logo-row-1">
+                    <div class="luxury-client-logo"><img src="images/clientlogos/aston_2.svg" alt="Aston Martin"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/toyota_2.svg" alt="Toyota"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/hyundai_1.svg" alt="Hyundai"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/skoda_1.svg" alt="Skoda"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/hilti_1.svg" alt="Hilti"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/decathlon_1.svg" alt="Decathlon"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/bandq_1.svg" alt="B&Q"/> </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="luxury-client-logo"><img src="images/clientlogos/aston_2.svg" alt="Aston Martin"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/toyota_2.svg" alt="Toyota"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/hyundai_1.svg" alt="Hyundai"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/skoda_1.svg" alt="Skoda"/> </div>
+                </div>
+                <!-- Row 2: Local Excellence -->
+                <div class="luxury-logo-row luxury-logo-row-2">
+                    <div class="luxury-client-logo"><img src="images/clientlogos/sse_1.svg" alt="SSE Arena Belfast"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/w5_2.svg" alt="W5 Belfast"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/niscreen_1.svg" alt="Northern Ireland Screen"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/goh_2.svg" alt="Game of Thrones"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/ea.svg" alt="Education Authority"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/lyric_1.svg" alt="Lyric Theatre"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/odyssey_1.svg" alt="Odyssey"/> </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="luxury-client-logo"><img src="images/clientlogos/sse_1.svg" alt="SSE Arena Belfast"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/w5_2.svg" alt="W5 Belfast"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/niscreen_1.svg" alt="Northern Ireland Screen"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/goh_2.svg" alt="Game of Thrones"/> </div>
+                </div>
+                <!-- Row 3: Retail & Hospitality -->
+                <div class="luxury-logo-row luxury-logo-row-3">
+                    <div class="luxury-client-logo"><img src="images/clientlogos/spar_1.svg" alt="Spar"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/ramada_1.svg" alt="Ramada"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/harcourt_1.svg" alt="Harcourt"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/tourism.svg" alt="NI Tourism"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/bcc_1.svg" alt="Belfast City Council"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/victim_1.svg" alt="Victim Support NI"/> </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="luxury-client-logo"><img src="images/clientlogos/spar_1.svg" alt="Spar"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/ramada_1.svg" alt="Ramada"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/harcourt_1.svg" alt="Harcourt"/> </div>
+                    <div class="luxury-client-logo"><img src="images/clientlogos/tourism.svg" alt="NI Tourism"/> </div>
+                </div>
+            </div>
+        </div>
+        <div class="luxury-client-stats">
+            <div class="luxury-stat-item">
+                <div class="luxury-stat-number">50+</div>
+                <div class="luxury-stat-label">Industry Leaders</div>
+            </div>
+            <div class="luxury-stat-divider"></div>
+            <div class="luxury-stat-item">
+                <div class="luxury-stat-number">12</div>
+                <div class="luxury-stat-label">Sectors Served</div>
+            </div>
+            <div class="luxury-stat-divider"></div>
+            <div class="luxury-stat-item">
+                <div class="luxury-stat-number">200+</div>
+                <div class="luxury-stat-label">Spaces Transformed</div>
+            </div>
+        </div>
     </div>
-</div>
-<style>
-    .lazyblock-client-logos-Z1UP84z {
-        padding: 20px;
-        background-color: #f8f9fa;
-    }
-    .client-logos-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .client-logos-container ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-        align-items: center;
-    }
-    .client-logos-container li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .client-logos-container li:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    }
-    .client-logos-container img,
-    .client-logos-container svg {
-        max-width: 100%;
-        max-height: 80px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-    .px-0 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .mb-0 {
-        margin-bottom: 0;
-    }
-</style>
-
-<section class="vertical-panels-section">
-  <div class="vertical-panels-wrapper">
-    <div class="vertical-panel panel-1">
-      <div class="vertical-panel-content">
-        <div class="vertical-panel-eyebrow">The security first platform</div>
-        <h2 class="section-title">Spot issues faster</h2>
-        <p>All the lorem ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-        <!-- Optional image -->
-  <img src="images/feature-image-04.png" alt="Feature 1" class="vertical-panel-img">
-      </div>
-    </div>
-    <div class="vertical-panel panel-2">
-      <div class="vertical-panel-content">
-        <div class="vertical-panel-eyebrow">The security first platform</div>
-        <h2 class="section-title">Make better decisions</h2>
-        <p>Panel 2 content goes here. Replace this text or add an image as needed.</p>
-        <!-- Optional image -->
-      </div>
-    </div>
-    <div class="vertical-panel panel-3">
-      <div class="vertical-panel-content">
-        <div class="vertical-panel-eyebrow">The security first platform</div>
-        <h2 class="section-title">Plan ahead</h2>
-        <p>Panel 3 content goes here. Replace this text or add an image as needed.</p>
-        <!-- Optional image -->
-      </div>
-    </div>
-    <div class="vertical-panel panel-4">
-      <div class="vertical-panel-content">
-        <div class="vertical-panel-eyebrow">The security first platform</div>
-        <h2 class="section-title">Onboard better</h2>
-        <p>Panel 4 content goes here. Replace this text or add an image as needed.</p>
-        <!-- Optional image -->
-      </div>
-    </div>
-  </div>
 </section>
-
-<section class="mainpanels-section">
-  <div class="mainpanels-wrapper">
-    <!-- Top panel -->
-    <div class="mainpanel mainpanel-large" id="mainpanel-1">
-      <div class="mainpanel-content">
-        <h3>Marketing and Business Development</h3>
-        <p>Virtual tours are no longer just a novelty; they are a strategic asset that transforms how you attract, engage, and convert your audience...</p>
-  <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
-      </div>
-      <div class="mainpanel-visual">
-  <img src="images/graphic1.png" width="400" height="320" alt="Graphic 1" style="margin-bottom:1rem;" />
-      </div>
-      <div class="mainpanel-glow" id="mainpanel-glow-1"></div>
-      <div class="mainpanel-edge"></div>
+<section class="luxury-vertical-showcase">
+    <div class="luxury-showcase-container">
+        <div class="luxury-showcase-header">
+            <h2 class="luxury-showcase-title">Beyond Tours.<br>Pure Transformation.</h2>
+                <p class="luxury-showcase-subtitle">Discover how 360° technology transforms the way you see, plan, and optimize your
+                    spaces</p>
+            </div>
+            <div
+                class="luxury-vertical-cards">
+                <!-- Card 1: Security Intelligence -->
+                <div class="luxury-vertical-card luxury-card-1">
+                    <div class="luxury-card-content">
+                        <div class="luxury-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22S8 18 8 13V6L12 4L16 6V13C16 18 12 22 12 22Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="luxury-card-text">
+                            <span class="luxury-card-eyebrow">Security & Risk Assessment</span>
+                            <h3 class="luxury-card-title">Pinpoint Problems, Prevent Pitfalls</h3>
+                            <p class="luxury-card-description">
+                                Proactively identify layout inefficiencies, security vulnerabilities, and logistical bottlenecks. From footfall patterns
+                                to fire exits, gain a comprehensive view to spot issues before they escalate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Strategic Planning -->
+                <div class="luxury-vertical-card luxury-card-2">
+                    <div class="luxury-card-content">
+                        <div class="luxury-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 11H15M9 15H15M17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H12.5858C12.851 3 13.1054 3.10536 13.2929
+                                        3.29289L18.7071 8.70711C18.8946 8.89464 19 9.149 19 9.41421V19C19 20.1046 18.1054 21 17 21Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="luxury-card-text">
+                            <span class="luxury-card-eyebrow">Strategic Planning</span>
+                            <h3 class="luxury-card-title">Decision-Making, Elevated</h3>
+                            <p class="luxury-card-description">
+                                Simulate and analyze changes to optimize layouts, product placement, and operational flow. Test scenarios virtually to
+                                ensure every strategic choice delivers maximum impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Training & Onboarding -->
+                <div class="luxury-vertical-card luxury-card-3">
+                    <div class="luxury-card-content">
+                        <div class="luxury-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 12H18L15 21L9 3L6 12H2"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="luxury-card-text">
+                            <span class="luxury-card-eyebrow">Training & Onboarding</span>
+                            <h3 class="luxury-card-title">Immersive Learning That Sticks</h3>
+                            <p class="luxury-card-description">
+                                Rapidly train new team members with immersive virtual tours of your entire operation. Provide comprehensive, risk-free
+                                orientation to safety protocols and operational procedures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: Future-Proofing -->
+                <div class="luxury-vertical-card luxury-card-4">
+                    <div class="luxury-card-content">
+                        <div class="luxury-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="luxury-card-text">
+                            <span class="luxury-card-eyebrow">Future-Proofing</span>
+                            <h3 class="luxury-card-title">Strategic Planning, Simplified</h3>
+                            <p class="luxury-card-description">
+                                Effortlessly map out future renovations, security upgrades, and new integrations. Visualize and collaborate on
+                                modifications without ever leaving the office.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="luxury-mainpanels-section">
+    <div class="luxury-mainpanels-container">
+        <div class="luxury-mainpanels-header">
+            <h2 class="luxury-mainpanels-title">Executive Intelligence.<br>Strategic Advantage.</h2>
+            <p class="luxury-mainpanels-subtitle">Four critical areas where 360° technology transforms business outcomes for
+                forward-thinking leaders</p>
+        </div>
+        <div
+            class="luxury-mainpanels-grid">
+            <!-- Panel 1: Marketing and Business Development -->
+            <div class="luxury-mainpanel luxury-mainpanel-large" id="mainpanel-1">
+                <div class="luxury-mainpanel-content">
+                    <div class="luxury-mainpanel-category">Strategic Growth</div>
+                    <h3>Marketing & Business Development</h3>
+                    <p>Transform your competitive positioning with immersive technology that converts prospects faster, closes deals
+                        stronger, and positions your organization as the innovation leader in your sector.</p>
+                    <a class="luxury-mainpanel-btn" href="#0">
+                        <span>Discover Growth Strategy</span>
+                        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 17L17 7M17 7H7M17 7V17"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="luxury-mainpanel-visual">
+                    <img src="images/panelgraphicnew.png" width="600" height="300" alt="Marketing Strategy Visualization"/>
+                    <div class="luxury-visual-overlay"></div>
+                </div>
+                <div class="luxury-mainpanel-glow" id="mainpanel-glow-1"></div>
+            </div>
+            <!-- Panel Row: Operations & Customer Experience -->
+            <div class="luxury-mainpanels-row">
+                <div class="luxury-mainpanel luxury-mainpanel-small" id="mainpanel-2">
+                    <div class="luxury-mainpanel-content">
+                        <div class="luxury-mainpanel-category">Operational Excellence</div>
+                        <h3>Operational Efficiency & Planning</h3>
+                        <p>Optimize workflows, reduce costs, and make data-driven decisions with virtual intelligence that transforms how
+                            leadership manages and scales operations.</p>
+                        <a class="luxury-mainpanel-btn" href="#0">
+                            <span>Explore Efficiency</span>
+                            <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="luxury-mainpanel-visual">
+                        <img src="images/bandq.png" width="380" height="250" alt="Operations Optimization"/>
+                        <div class="luxury-visual-overlay"></div>
+                    </div>
+                    <div class="luxury-mainpanel-glow" id="mainpanel-glow-2"></div>
+                </div>
+                <div class="luxury-mainpanel luxury-mainpanel-small" id="mainpanel-3">
+                    <div class="luxury-mainpanel-content">
+                        <div class="luxury-mainpanel-category">Customer Excellence</div>
+                        <h3>Customer Experience & Accessibility</h3>
+                        <p>Differentiate through accessibility and transparency. Build trust, increase satisfaction, and create inclusive
+                            experiences that drive loyalty and revenue.</p>
+                        <a class="luxury-mainpanel-btn" href="#0">
+                            <span>Enhance Experience</span>
+                            <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="luxury-mainpanel-visual">
+                        <img src="images/access.png" width="380" height="250" alt="Customer Experience"/>
+                        <div class="luxury-visual-overlay"></div>
+                    </div>
+                    <div class="luxury-mainpanel-glow" id="mainpanel-glow-3"></div>
+                </div>
+            </div>
+            <!-- Panel 4: Sector-Specific Applications -->
+            <div class="luxury-mainpanel luxury-mainpanel-large" id="mainpanel-4">
+                <div class="luxury-mainpanel-content">
+                    <div class="luxury-mainpanel-category">Industry Leadership</div>
+                    <h3>Sector-Specific Applications</h3>
+                    <p>Industry-tailored solutions that address your sector's unique challenges. From healthcare to hospitality,
+                        manufacturing to retail—discover how leaders in your field are gaining competitive advantage.</p>
+                    <a class="luxury-mainpanel-btn" href="#0">
+                        <span>View Industry Solutions</span>
+                        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 17L17 7M17 7H7M17 7V17"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="luxury-mainpanel-visual">
+                    <img src="images/sector.png" width="400" height="320" alt="Industry Applications"/>
+                    <div class="luxury-visual-overlay"></div>
+                </div>
+                <div class="luxury-mainpanel-glow" id="mainpanel-glow-4"></div>
+            </div>
+        </div>
     </div>
-    <!-- Middle row: two panels -->
-    <div class="mainpanels-row">
-      <div class="mainpanel mainpanel-small" id="mainpanel-2">
-        <div class="mainpanel-content">
-          <h3>Operational Efficiency & Planning</h3>
-          <p>For management, a virtual tour is far more than a marketing tool—it's a strategic asset that transforms internal operations.</p>
-          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
-        </div>
-        <div class="mainpanel-visual">
-          <img src="images/graphic1.png" width="320" height="180" alt="Feature 02" />
-        </div>
-        <div class="mainpanel-glow" id="mainpanel-glow-2"></div>
-        <div class="mainpanel-edge"></div>
-      </div>
-      <div class="mainpanel mainpanel-small" id="mainpanel-3">
-        <div class="mainpanel-content">
-          <h3>Customer Experience & Accessibility</h3>
-          <p>In today's market, customer experience is your greatest differentiator. A virtual tour is a powerful tool for building trust and loyalty by making your space more transparent, more accessible, and more welcoming to everyone.</p>
-          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
-        </div>
-        <div class="mainpanel-visual">
-          <img src="images/graphic1.png" width="180" height="180" alt="Feature 03" />
-        </div>
-        <div class="mainpanel-glow" id="mainpanel-glow-3"></div>
-        <div class="mainpanel-edge"></div>
-      </div>
-    </div>
-    <!-- Bottom panel -->
-    <div class="mainpanel mainpanel-large" id="mainpanel-4">
-      <div class="mainpanel-content">
-        <h3>Sector-Specific Applications</h3>
-        <p>Every industry has unique challenges and goals. While the core benefits of a virtual tour, from enhanced marketing to improved operations, are universal, we understand that a one-size-fits-all approach doesn't work.</p>
-          <a class="site-btn" href="#0">Read more <span>&rarr;</span></a>
-      </div>
-      <div class="mainpanel-visual">
-  <img src="images/graphic1.png" width="400" height="320" alt="Feature 04" />
-      </div>
-      <div class="mainpanel-glow" id="mainpanel-glow-4"></div>
-      <div class="mainpanel-edge"></div>
-    </div>
-  </div>
 </section>
 <script>
-// Mouse-follow glow effect for all main panels
-function addMainPanelGlow(panelId, glowId) {
-  const panel = document.getElementById(panelId);
-  const glow = document.getElementById(glowId);
-  if(panel && glow) {
-    panel.addEventListener('mousemove', function(e) {
-      const rect = panel.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      glow.style.setProperty('--x', `${x}px`);
-      glow.style.setProperty('--y', `${y}px`);
-    });
-    panel.addEventListener('mouseleave', function() {
-      glow.style.setProperty('--x', `50%`);
-      glow.style.setProperty('--y', `50%`);
-    });
-  }
-}
-addMainPanelGlow('mainpanel-1', 'mainpanel-glow-1');
-addMainPanelGlow('mainpanel-2', 'mainpanel-glow-2');
-addMainPanelGlow('mainpanel-3', 'mainpanel-glow-3');
-addMainPanelGlow('mainpanel-4', 'mainpanel-glow-4');
+    // Enhanced mouse-follow glow effect for luxury main panels
+    function addLuxuryMainPanelGlow(panelId, glowId) {
+        const panel = document.getElementById(panelId);
+        const glow = document.getElementById(glowId);
+        if (panel && glow) {
+            panel.addEventListener('mousemove', function (e) {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                glow.style.setProperty('--x', `${x}px`);
+                glow.style.setProperty('--y', `${y}px`);
+                glow.style.opacity = '1';
+            });
+            panel.addEventListener('mouseleave', function () {
+                glow.style.setProperty('--x', `50%`);
+                glow.style.setProperty('--y', `50%`);
+                glow.style.opacity = '0.6';
+            });
+        }
+    }
+    // Initialize all luxury main panel glows
+    addLuxuryMainPanelGlow('mainpanel-1', 'mainpanel-glow-1');
+    addLuxuryMainPanelGlow('mainpanel-2', 'mainpanel-glow-2');
+    addLuxuryMainPanelGlow('mainpanel-3', 'mainpanel-glow-3');
+    addLuxuryMainPanelGlow('mainpanel-4', 'mainpanel-glow-4');
 </script>
-
-<section class="case-study-home">
-  <div class="container">
-    <div class="top-content">
-      <h2 class="section-title">Case studies</h2>
-    </div>
-    <div class="row">
-      <!-- Case Study 1 (Light) -->
-      <div class="case-col">
-        <div class="case-study-block">
-          <a href="#">
-            <div class="top-area" style="background:#F3F5FB">
-              <div class="top-bg-img">
-                <img src="https://rocket-saas.io/wp-content/uploads/2025/07/RAM-Tracking-Light.png" alt="Case Study 1 graphic" class="case-img" />
-              </div>
-              <div class="case-study-content" style="font-family: 'Montserrat', Arial, sans-serif;">
-                <h4 style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 700;">Case Study Title</h4>
-                <p style="font-family: 'Inter', Arial, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur.</p>
-                <a class="site-btn" href="#">Read more <span>&rarr;</span></a>
-              </div>
-            </div>
-          </a>
+<section class="portfolio-section">
+    <div class="container">
+        <div class="portfolio-header">
+            <h2 class="portfolio-heading">Case studies</h2>
         </div>
-      </div>
-      <!-- Case Study 2 (Dark) -->
-      <div class="case-col">
-        <div class="case-study-block">
-          <a href="#">
-            <div class="top-area white-txt" style="background:#160647">
-              <div class="top-bg-img">
-                <img src="https://rocket-saas.io/wp-content/uploads/2025/07/SurveySphere-Dark.png" alt="Case Study 2 graphic" class="case-img" />
-              </div>
-              <div class="case-study-content" style="font-family: 'Montserrat', Arial, sans-serif;">
-                <h4 style="font-family: 'Montserrat', Arial, sans-serif; font-weight: 700;">Case Study Title</h4>
-                <p style="font-family: 'Inter', Arial, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur.</p>
-                <a class="site-btn" href="#">Read more <span>&rarr;</span></a>
-              </div>
+        <!-- Portfolio Grid -->
+        <div
+            class="portfolio-grid">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item no-overlay">
+                <div class="portfolio-box">
+                    <div class="portfolio-image">
+                        <img src="images/limavady-1.png" alt="Limavady High School Portfolio" loading="lazy" class="main-image">
+                        <img src="images/limavady-2.png" alt="Limavady High School Portfolio Hover" loading="lazy" class="hover-image">
+                    </div>
+                    <div class="portfolio-hover">
+                        <div class="portfolio-icon">
+                            <i class="arrow-icon">↗</i>
+                        </div>
+                        <div class="portfolio-caption">
+                            <span class="title">Education</span>
+                            <span class="subtitle">School</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item no-overlay">
+                <div class="portfolio-box">
+                    <div class="portfolio-image">
+                        <img src="images/limavady-1.png" alt="Portfolio Item 2" loading="lazy" class="main-image">
+                        <img src="images/limavady-2.png" alt="Portfolio Item 2 Hover" loading="lazy" class="hover-image">
+                    </div>
+                    <div class="portfolio-hover">
+                        <div class="portfolio-icon">
+                            <i class="arrow-icon">↗</i>
+                        </div>
+                        <div class="portfolio-caption">
+                            <span class="title">Violator</span>
+                            <span class="subtitle">Branding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item no-overlay">
+                <div class="portfolio-box">
+                    <div class="portfolio-image">
+                        <img src="images/limavady-1.png" alt="Portfolio Item 3" loading="lazy" class="main-image">
+                        <img src="images/limavady-2.png" alt="Portfolio Item 3 Hover" loading="lazy" class="hover-image">
+                    </div>
+                    <div class="portfolio-hover">
+                        <div class="portfolio-icon">
+                            <i class="arrow-icon">↗</i>
+                        </div>
+                        <div class="portfolio-caption">
+                            <span class="title">Gardner</span>
+                            <span class="subtitle">Branding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <!-- View All Case Studies Link -->
+        <div class="portfolio-footer">
+            <a href="/case-studies" class="view-all-btn">
+                View All Case Studies
+                <span class="arrow">→</span>
+            </a>
+        </div>
     </div>
-  </div>
 </section>
-
 <section class="testimonials-section">
-  <div class="testimonial-header">
-    <h2 class="section-title">What our clients say</h2>
-    <p class="section-subtitle">Real feedback from real people we've worked with</p>
-  </div>
-  <div class="testimonial-wrapper">
-    <div class="testimonial-tabs">
-      <ul id="testimonialTab" role="tablist">
-        <li role="presentation">
-          <button id="testimonial-1-tab" type="button" role="tab" aria-controls="testimonial-1" aria-selected="true">
-            <figcaption>
-              <div class="testimonial-avatar">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
-                <div class="testimonial-name">Michael Gough</div>
-              </div>
-              <div class="testimonial-title">Web developer at Google</div>
-            </figcaption>
-          </button>
-        </li>
-        <li role="presentation">
-          <button id="testimonial-2-tab" type="button" role="tab" aria-controls="testimonial-2" aria-selected="false">
-            <figcaption>
-              <div class="testimonial-avatar">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                <div class="testimonial-name">Bonnie Green</div>
-              </div>
-              <div class="testimonial-title">CEO at Facebook</div>
-            </figcaption>
-          </button>
-        </li>
-        <li role="presentation">
-          <button id="testimonial-3-tab" type="button" role="tab" aria-controls="testimonial-3" aria-selected="false">
-            <figcaption>
-              <div class="testimonial-avatar">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
-                <div class="testimonial-name">Lana Byrd</div>
-              </div>
-              <div class="testimonial-title">CTO at Microsoft</div>
-            </figcaption>
-          </button>
-        </li>
-      </ul>
-      <a class="testimonial-link" href="#">View other 20 testimonials
-        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-      </a>
+    <div class="container">
+        <div class="testimonials-header">
+            <h2 class="section-title">What our clients say</h2>
+            <p class="section-subtitle">Real feedback from real people we've worked with</p>
+        </div>
+        <div
+            class="testimonials-wrapper">
+            <!-- Client Tabs -->
+            <div class="testimonial-tabs">
+                <div class="tab-list" role="tablist">
+                    <button class="tab-button active" data-tab="testimonial-1" role="tab" aria-selected="true">
+                        <div class="client-info">
+                            <img
+                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                                alt="Michael Gough"
+                                class="client-avatar">
+                            <div class="client-details">
+                                <div class="client-name">Michael Gough</div>
+                                <div class="client-title">Web Developer at Google</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="tab-button" data-tab="testimonial-2" role="tab" aria-selected="false">
+                        <div class="client-info">
+                            <img
+                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                                alt="Bonnie Green"
+                                class="client-avatar">
+                            <div class="client-details">
+                                <div class="client-name">Bonnie Green</div>
+                                <div class="client-title">CEO at Facebook</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="tab-button" data-tab="testimonial-3" role="tab" aria-selected="false">
+                        <div class="client-info">
+                            <img
+                                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+                                alt="Lana Byrd"
+                                class="client-avatar">
+                            <div class="client-details">
+                                <div class="client-name">Lana Byrd</div>
+                                <div class="client-title">CTO at Microsoft</div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- Testimonial Content -->
+            <div class="testimonial-content">
+                <div class="testimonial-panel active" id="testimonial-1" role="tabpanel">
+                    <div class="quote-icon">❝</div>
+                    <h3>It was a great experience!</h3>
+                    <p>Working with this team transformed our digital presence completely. Their attention to detail and innovative approach
+                        exceeded our expectations. The results speak for themselves - we've seen incredible growth since launch.</p>
+                    <p>There is absolutely no doubt in my mind that without their expertise, we would not have been able to achieve our
+                        ambitious goals. The professional execution made all the difference.</p>
+                </div>
+                <div class="testimonial-panel" id="testimonial-2" role="tabpanel">
+                    <div class="quote-icon">❝</div>
+                    <h3>Outstanding results!</h3>
+                    <p>The level of professionalism and creativity brought to our project was exceptional. Every milestone was met with
+                        precision and the final product truly reflects our brand vision.</p>
+                    <p>I would recommend this team to anyone looking for top-tier digital solutions. The impact on our business has been
+                        remarkable and continues to drive growth.</p>
+                </div>
+                <div class="testimonial-panel" id="testimonial-3" role="tabpanel">
+                    <div class="quote-icon">❝</div>
+                    <h3>Incredible design expertise!</h3>
+                    <p>From concept to completion, the design process was seamless and collaborative. The team's ability to translate
+                        complex ideas into beautiful, functional solutions is truly impressive.</p>
+                    <p>The attention to user experience and technical excellence has set a new standard for our organization. We couldn't be
+                        happier with the partnership.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="testimonial-content">
-      <div id="testimonialTabContent">
-        <div id="testimonial-1" role="tabpanel" aria-labelledby="testimonial-1-tab" style="display:block;">
-          <svg viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="testimonial-quote"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
-          <h3>It was a great experience!</h3>
-          <p>Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
-          <p>There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite.</p>
-        </div>
-        <div id="testimonial-2" role="tabpanel" aria-labelledby="testimonial-2-tab" style="display:none;">
-          <svg viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="testimonial-quote"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
-          <h3>Best product!</h3>
-          <p>Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
-          <p>I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite.</p>
-        </div>
-        <div id="testimonial-3" role="tabpanel" aria-labelledby="testimonial-3-tab" style="display:none;">
-          <svg viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg" class="testimonial-quote"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
-          <h3>Great design!</h3>
-          <p>Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application.</p>
-          <p>There is absolutely no doubt in my mind that without Flowbite, I would not have been able to make the jump to Ueno, a digital agency I started in 2014. The work I got through Flowbite made it possible for me to have something to build on. We now have about 45 people on our team, a lot of whom we found and recruited through Flowbite.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 <script>
-// Tab logic for testimonials: only show the selected testimonial
-const tabButtons = document.querySelectorAll('#testimonialTab button');
-const tabPanels = document.querySelectorAll('#testimonialTabContent > div');
-tabButtons.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    tabButtons.forEach(b => b.setAttribute('aria-selected', 'false'));
-    btn.setAttribute('aria-selected', 'true');
-    tabPanels.forEach((panel, i) => {
-      panel.style.display = (i === idx) ? 'block' : 'none';
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const testimonialPanels = document.querySelectorAll('.testimonial-panel');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetTab = this.getAttribute('data-tab');
+                // Remove active class from all buttons and panels
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                testimonialPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                });
+                // Add active class to clicked button and corresponding panel
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+                document
+                    .getElementById(targetTab)
+                    .classList
+                    .add('active');
+            });
+        });
     });
-  });
-});
 </script>
-<style>
-.testimonials-section {
-  background: #18181b;
-  color: #f3f4f6;
-  padding: 2rem 0;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.testimonial-header {
-  max-width: 1100px;
-  margin: 0 auto 2.5rem auto;
-  text-align: center;
-}
-.testimonial-title {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem; /* 40px */
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-.testimonial-subtitle {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 1.13rem;
-  color: #a1a1aa;
-  margin-bottom: 0;
-}
-.testimonial-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-.testimonial-tabs {
-  flex: 1 1 250px;
-  min-width: 250px;
-  max-width: 320px;
-}
-.testimonial-tabs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
-}
-.testimonial-tabs li {
-  margin-bottom: 1rem;
-}
-.testimonial-tabs button {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  display: flex;
-  align-items: center;
-  color: #f3f4f6;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.08rem;
-}
-.testimonial-tabs button[aria-selected="true"] {
-  background: #27272a;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  border: 2px solid #f3f4f6;
-}
-.testimonial-avatar {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.testimonial-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #27272a;
-}
-.testimonial-name {
-  font-weight: 700;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.08rem;
-}
-.testimonial-title {
-  font-size: 0.97rem;
-  color: #a1a1aa;
-  margin-left: 2.5rem;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.testimonial-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  font-size: 0.98rem;
-  color: #60a5fa;
-  text-decoration: none;
-  margin-top: 1.5rem;
-  margin-left: 0.5rem;
-  font-family: 'Inter', Arial, sans-serif;
-}
-.testimonial-link:hover {
-  text-decoration: underline;
-  color: #93c5fd;
-}
-.testimonial-content {
-  flex: 2 1 400px;
-  min-width: 300px;
-  display: flex;
-  align-items: center;
-}
-#testimonialTabContent > div {
-  display: block;
-}
-.testimonial-quote {
-  width: 32px;
-  height: 32px;
-  color: #a1a1aa;
-  margin-bottom: 1rem;
-}
-.testimonial-content h3 {
-  color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.35rem;
-  margin-bottom: 0.7rem;
-}
-.testimonial-content p {
-  color: #d4d4d8;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 1.08rem;
-  line-height: 1.7;
-}
-@media (max-width: 900px) {
-  .testimonial-wrapper {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .testimonial-content {
-    min-width: 0;
-  }
-}
-@media (max-width: 600px) {
-  .testimonial-tabs {
-    max-width: 100%;
-    min-width: 0;
-  }
-  .testimonial-content {
-    min-width: 0;
-  }
-}
-</style>
-
-<section class="get-started-section">
-  <div class="get-started-container">
-    <div class="get-started-header">
-      <span class="get-started-eyebrow">Let's make it happen</span>
-  <h2 class="get-started-title"><span class="get-started-title-light">Ready to</span><br><span class="get-started-title-bold">Get started</span></h2>
-      <div class="get-started-tabs">
-        <button class="get-started-tab get-started-tab--active" data-tab="quote">Request a quote</button>
-        <button class="get-started-tab" data-tab="call">Book a call</button>
-      </div>
+<section id="contact-form-section" class="luxury-contact-section">
+    <div class="luxury-contact-container">
+        <div class="luxury-contact-content">
+            <div class="luxury-contact-header">
+                <h2 class="luxury-contact-heading">Ready for a New 360 View?</h2>
+                <p class="luxury-contact-description">Together we'll find out the best solutions.</p>
+            </div>
+            <form class="luxury-contact-form" autocomplete="off">
+                <div class="luxury-form-grid">
+                    <div class="luxury-input-group">
+                        <input type="text" name="full-name" id="full-name" required class="luxury-input">
+                        <label for="full-name" class="luxury-label">Full Name *</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-input-group">
+                        <input type="email" name="email" id="email" required class="luxury-input">
+                        <label for="email" class="luxury-label">Email Address *</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-input-group">
+                        <input type="tel" name="phone" id="phone" required class="luxury-input">
+                        <label for="phone" class="luxury-label">Phone Number *</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-input-group">
+                        <input type="text" name="location" id="location" required class="luxury-input">
+                        <label for="location" class="luxury-label">Location *</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-input-group luxury-select-group">
+                        <select name="referral" id="referral" required class="luxury-select">
+                            <option value="" disabled selected></option>
+                            <option value="Google Ads/Search">Searching online</option>
+                            <option value="Instagram">Instagram/Facebook</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Referral">Referral</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label for="referral" class="luxury-label">How did you find us? *</label>
+                        <div class="luxury-input-line"></div>
+                        <div class="luxury-select-arrow">
+                            <svg width="12" height="8" viewbox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="luxury-input-group luxury-full-width">
+                        <input type="text" name="company" id="company" required class="luxury-input">
+                        <label for="company" class="luxury-label">Company Name *</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-input-group luxury-select-group luxury-full-width">
+                        <select name="budget" id="budget" required class="luxury-select">
+                            <option value="" disabled selected></option>
+                            <option value="to £5K">to £5K</option>
+                            <option value="£5K - £10K">£5K - £10K</option>
+                            <option value="£10K - £25K">£10K - £25K</option>
+                            <option value="£25K - £50K">£25K - £50K</option>
+                            <option value="£50K+">£50K+</option>
+                        </select>
+                        <label for="budget" class="luxury-label">Investment Range</label>
+                        <div class="luxury-input-line"></div>
+                        <div class="luxury-select-arrow">
+                            <svg width="12" height="8" viewbox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="luxury-input-group luxury-full-width">
+                        <textarea name="message" id="message" class="luxury-textarea" rows="4"></textarea>
+                        <label for="message" class="luxury-label">Tell us about your project</label>
+                        <div class="luxury-input-line"></div>
+                    </div>
+                    <div class="luxury-checkbox-group luxury-full-width">
+                        <div class="luxury-checkbox-header">
+                            <span class="luxury-checkbox-title">How can we help you? *</span>
+                        </div>
+                        <div class="luxury-checkbox-options">
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" name="help[]" value="Branding">
+                                <span class="luxury-checkbox-mark"></span>
+                                <span class="luxury-checkbox-text">Branding</span>
+                            </label>
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" name="help[]" value="Design">
+                                <span class="luxury-checkbox-mark"></span>
+                                <span class="luxury-checkbox-text">Design</span>
+                            </label>
+                            <label class="luxury-checkbox">
+                                <input type="checkbox" name="help[]" value="Development">
+                                <span class="luxury-checkbox-mark"></span>
+                                <span class="luxury-checkbox-text">Development</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="luxury-submit-group luxury-full-width">
+                        <button type="submit" class="luxury-submit-btn">
+                            <span class="luxury-btn-text">Get Started Now</span>
+                            <span class="luxury-btn-arrow">
+                                <svg width="20" height="20" viewbox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="get-started-content">
-      <form class="get-started-form" id="get-started-form">
-        <div class="get-started-form-row">
-          <input type="text" name="name" placeholder="Full name" required>
-          <input type="email" name="email" placeholder="Business email" required>
-        </div>
-        <textarea name="message" placeholder="Tell us about your project" required></textarea>
-        <div class="get-started-form-row">
-          <select name="budget" required>
-            <option value="">Budget</option>
-            <option value="$5K - $10K">$5K - $10K</option>
-            <option value="$10K - $25K">$10K - $25K</option>
-            <option value="$25K - $50K">$25K - $50K</option>
-            <option value="$50K+">$50K+</option>
-          </select>
-        </div>
-        <div class="get-started-checkbox-group">
-          <span class="get-started-checkbox-label">How can we help you <span class="get-started-checkbox-required">*</span></span>
-          <label class="get-started-checkbox">
-            <input type="checkbox" name="help[]" value="Branding">
-            <span class="get-started-custom-checkbox"></span>
-            Branding
-          </label>
-          <label class="get-started-checkbox">
-            <input type="checkbox" name="help[]" value="Design">
-            <span class="get-started-custom-checkbox"></span>
-            Design
-          </label>
-          <label class="get-started-checkbox">
-            <input type="checkbox" name="help[]" value="Development">
-            <span class="get-started-custom-checkbox"></span>
-            Development
-          </label>
-        </div>
-  <button type="submit" class="site-btn">Send message</button>
-      </form>
-      <div class="get-started-call" style="display:none;">
-        <h3>No fluff, no filler — just results.</h3>
-        <p>We’ll discuss your goals, explore how we can enhance your brand’s digital experience, and provide expert insights on design, development, or strategy.<br><br>Let’s bring your vision to life!</p>
-        <div class="get-started-call-options">
-          <a href="#" class="site-btn">15 Min Meeting</a>
-          <a href="#" class="site-btn">30 Min Meeting</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-// Simple tab switcher
-const tabs = document.querySelectorAll('.get-started-tab');
-const form = document.querySelector('.get-started-form');
-const call = document.querySelector('.get-started-call');
-tabs.forEach(tab => {
-  tab.addEventListener('click', function() {
-    tabs.forEach(t => t.classList.remove('get-started-tab--active'));
-    this.classList.add('get-started-tab--active');
-    if (this.dataset.tab === 'quote') {
-      form.style.display = '';
-      call.style.display = 'none';
-    } else {
-      form.style.display = 'none';
-      call.style.display = '';
-    }
-  });
-});
-</script>
-
-<section class="connect-section">
-  <h2 class="section-title">Let's Connect</h2>
-  <div class="connect-form-wrapper">
-    <form>
-      <div class="connect-form-row">
-        <input class="connect-input" type="email" name="email" aria-label="Enter your email to subscribe to the newsletter" placeholder="Enter your email..." autocomplete="off" required>
-  <button class="site-btn" type="submit">Join Newsletter</button>
-      </div>
-    </form>
-  </div>
 </section>
 
+<section class="luxury-newsletter-section">
+    <div class="luxury-newsletter-container">
+        <div class="luxury-newsletter-content">
+            <div class="luxury-newsletter-header">
+                <div class="luxury-newsletter-icon">
+                    <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2 class="luxury-newsletter-title">Stay Ahead of the Curve</h2>
+                <p class="luxury-newsletter-description">
+                    Exclusive insights, industry innovations, and strategic intelligence delivered directly to forward-thinking leaders.
+                </p>
+                <div class="luxury-newsletter-benefits">
+                    <div class="luxury-benefit-item">
+                        <span class="luxury-benefit-icon">🎯</span>
+                        <span>Cutting-edge case studies</span>
+                    </div>
+                    <div class="luxury-benefit-item">
+                        <span class="luxury-benefit-icon">💡</span>
+                        <span>Strategic insights & trends</span>
+                    </div>
+                    <div class="luxury-benefit-item">
+                        <span class="luxury-benefit-icon">🚀</span>
+                        <span>Early access to innovations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="luxury-newsletter-form-container">
+                <form class="luxury-newsletter-form">
+                    <div class="luxury-newsletter-input-group">
+                        <input
+                            type="email"
+                            name="email"
+                            id="newsletter-email"
+                            class="luxury-newsletter-input"
+                            placeholder=" "
+                            aria-label="Enter your email to subscribe to the newsletter"
+                            autocomplete="email"
+                            required>
+                        <label for="newsletter-email" class="luxury-newsletter-label">Your Email Address</label>
+                        <div class="luxury-newsletter-input-line"></div>
+                    </div>
+                    <button type="submit" class="luxury-newsletter-btn">
+                        <span class="luxury-newsletter-btn-text">Join the Elite</span>
+                        <span class="luxury-newsletter-btn-arrow">
+                            <svg width="20" height="20" viewbox="0 0 20 20" fill="none">
+                                <path
+                                    d="M4.16663 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+                <div class="luxury-newsletter-trust">
+                    <p class="luxury-trust-text">
+                        <span class="luxury-trust-icon">🔒</span>
+                        Premium content. Zero spam. Unsubscribe anytime.
+                    </p>
+                    <div class="luxury-trust-stats">
+                        <div class="luxury-stat-item">
+                            <span class="luxury-stat-number">2,847</span>
+                            <span class="luxury-stat-label">industry leaders</span>
+                        </div>
+                        <div class="luxury-stat-divider"></div>
+                        <div class="luxury-stat-item">
+                            <span class="luxury-stat-number">Weekly</span>
+                            <span class="luxury-stat-label">strategic insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="footer-section">
   <div class="footer-container">
     <div class="footer-brand-col">

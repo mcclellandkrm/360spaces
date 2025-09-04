@@ -3,30 +3,13 @@ layout: base.njk
 title: Home Page
 ---
 
-<section class="hero-section">
-	<video class="hero-bg-video" autoplay loop muted playsinline poster="https://www.w3schools.com/howto/img_snow_wide.jpg">
-		<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	<div class="framer-8a9miy" data-framer-appear-id="8a9miy" data-framer-name="Hero Content Block" style="opacity: 1; transform: none; will-change: transform;">
-		<div class="framer-14zcntt" data-framer-name="Hero text Block">
-			<div class="framer-1e96h50" data-framer-name="Title + Subtitle">
-				<div class="framer-z9sfzs" data-framer-name="Title + Underline">
-					<div class="ssr-variant hidden-1qys3w0 hidden-xsh6zi hidden-li12xm">
-						{% include "hero/hero-title.njk" %}
-					</div>
-					{% include "hero/hero-subcopy.njk" %}
-				</div>
-			</div>
-			{% include "hero/hero-button.njk" %}
-		</div>
-	</div>
-</section>
-{% include "brand-grid.njk" %}
+{% include "hero/hero.njk" %}
+{% include "client-showcase.njk" %}
 {% include "vertical-panels.njk" %}
 {% include "mainpanels.njk" %}
-{% include "case-studies.njk" %}
+{% include "use-cases.njk" %}
 {% include "testimonials.njk" %}
-{% include "get-started.njk" %}
+{% include "contact.form.njk" %}
+{# Removed get-started form section #}
 {% include "connect.njk" %}
 {% include "footer.njk" %}

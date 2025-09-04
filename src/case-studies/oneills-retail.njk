@@ -1,0 +1,135 @@
+---
+layout: base.njk
+title: "O'Neill's Retail Virtual Tour - 360spaces Case Study"
+description: "How immersive 360° retail experiences increased customer engagement and online sales for O'Neill's Sports"
+client: "O'Neill's Sports"
+service: "Retail Virtual Tours"
+sector: "Retail"
+heroImage: "images/oneills-1.png"
+secondaryImage: "images/oneills-2.png"
+testimonialQuote: "The virtual tour has become an essential part of our online strategy. Customers can explore our full range before visiting, leading to more qualified visits and higher conversion rates."
+testimonialAuthor: "Michael O'Neill"
+testimonialTitle: "Director, O'Neill's Sports"
+stats:
+  - number: "200%"
+    label: "Increase in Online Engagement"
+  - number: "35%"
+    label: "Higher In-Store Conversion"
+  - number: "60%"
+    label: "Reduction in Product Returns"
+tags: ["case-studies", "retail", "virtual-tours"]
+permalink: "/case-studies/oneills-retail/"
+---
+
+<section class="luxury-case-study">
+  <div
+    class="luxury-case-study-container">
+    <!-- Hero Header Section -->
+    <div class="luxury-case-study-hero">
+      <div class="luxury-case-study-meta">
+        <span class="luxury-case-study-badge">Case Study</span>
+        <div class="luxury-case-study-details">
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Client</span>
+            <span class="luxury-detail-value">{{ client }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Service</span>
+            <span class="luxury-detail-value">{{ service }}</span>
+          </div>
+          <div class="luxury-case-study-detail">
+            <span class="luxury-detail-label">Sector</span>
+            <span class="luxury-detail-value">{{ sector }}</span>
+          </div>
+        </div>
+      </div>
+      <h1 class="luxury-case-study-title">Revolutionizing Retail: {{ client }}'s Virtual Shopping Experience</h1>
+      <p class="luxury-case-study-subtitle">{{ description }}</p>
+    </div>
+    <!-- Main Image Section -->
+    <div class="luxury-case-study-image">
+      <img src="{{ heroImage }}" alt="{{ client }} Virtual Tour"/>
+      <div class="luxury-image-overlay"></div>
+    </div>
+    <!-- Project Description -->
+    <div class="luxury-case-study-content">
+      <div class="luxury-content-section">
+        <h2>Project Overview</h2>
+        <p>{{ client }} partnered with 360spaces to create an immersive retail experience that brings their flagship store
+          online. This innovative virtual tour allows customers to browse products, explore different departments, and get a
+          genuine feel for the store atmosphere before visiting in person.</p>
+        <p>The virtual tour seamlessly integrates with their e-commerce platform, creating a bridge between digital browsing and
+          physical retail that enhances the customer journey at every touchpoint.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>The Challenge</h2>
+        <p>{{ client }} needed to compete with online retailers while leveraging their physical store advantage. Traditional
+          product photos and descriptions weren't conveying the quality and variety of their sports equipment and clothing ranges.</p>
+        <p>They required a solution that would showcase their extensive product displays, create an engaging online experience,
+          and drive more qualified foot traffic to their physical locations.</p>
+      </div>
+      <div class="luxury-content-section">
+        <h2>Our Solution</h2>
+        <p>We created a comprehensive virtual retail experience that highlights {{ client }}'s competitive advantages:</p>
+        <ul class="luxury-feature-list">
+          <li>Interactive product showcases with detailed 360° views</li>
+          <li>Department-by-department navigation mimicking in-store browsing</li>
+          <li>Integration with inventory management for real-time availability</li>
+          <li>Mobile-optimized interface for on-the-go shopping</li>
+          <li>Social sharing features to amplify reach</li>
+        </ul>
+      </div>
+      <!-- Testimonial Section -->
+      <div class="luxury-testimonial-section">
+        <div class="luxury-testimonial-content">
+          <blockquote class="luxury-testimonial-quote">{{ testimonialQuote }}</blockquote>
+          <div class="luxury-testimonial-author">
+            <div class="luxury-author-info">
+              <span class="luxury-author-name">{{ testimonialAuthor }}</span>
+              <span class="luxury-author-title">{{ testimonialTitle }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Results Section -->
+      <div class="luxury-content-section">
+        <h2>Results</h2>
+        <div class="luxury-results-grid">
+          {% for stat in stats %}
+            <div class="luxury-result-stat">
+              <div class="luxury-stat-number">{{ stat.number }}</div>
+              <div class="luxury-stat-label">{{ stat.label }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- Additional Image -->
+      {% if secondaryImage %}
+        <div class="luxury-case-study-image luxury-secondary-image">
+          <img src="{{ secondaryImage }}" alt="{{ client }} Additional View"/>
+          <div class="luxury-image-caption">
+            <p>Customers can explore product ranges and store layouts through our immersive virtual shopping experience, leading to
+              more informed purchasing decisions.</p>
+          </div>
+        </div>
+      {% endif %}
+      <!-- Call to Action -->
+      <div class="luxury-case-study-cta">
+        <h3>Ready to Transform Your Retail Experience?</h3>
+        <p>Discover how 360° virtual tours can bridge the gap between online and in-store shopping, creating engaging
+          experiences that drive sales.</p>
+        <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="luxury-cta-button" target="_blank" rel="noopener">
+          <span>Schedule a Consultation</span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M7 17L17 7M17 7H7M17 7V17"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

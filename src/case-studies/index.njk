@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Case Studies - 360spaces
+description: Real success stories from our innovative immersive marketing solutions
+permalink: "/case-studies/"
+---
+
+<section class="luxury-case-studies-index">
+    <div
+        class="luxury-case-studies-container">
+        <!-- Hero Section -->
+        <div class="luxury-case-studies-hero">
+            <h1 class="luxury-case-studies-title">Case Studies</h1>
+            <p class="luxury-case-studies-subtitle">
+                Discover how we've transformed businesses across industries with immersive 360° experiences. From education to retail,
+                see real results from real clients.
+            </p>
+        </div>
+        <!-- Case Studies Grid -->
+        <div class="luxury-case-studies-grid">
+            {% set caseStudies = collections["case-studies"] %}
+            {% for study in caseStudies %}
+                <article class="luxury-case-study-card">
+                    <div class="luxury-case-study-card-image">
+                        <img src="{{ study.data.heroImage }}" alt="{{ study.data.client }} Case Study"/>
+                        <div class="luxury-case-study-card-overlay">
+                            <span class="luxury-case-study-sector">{{ study.data.sector }}</span>
+                        </div>
+                    </div>
+                    <div class="luxury-case-study-card-content">
+                        <h2 class="luxury-case-study-card-title">{{ study.data.client }}</h2>
+                        <p class="luxury-case-study-card-service">{{ study.data.service }}</p>
+                        <p class="luxury-case-study-card-description">{{ study.data.description }}</p>
+                        <a href="{{ study.url }}" class="luxury-case-study-card-link">
+                            <span>Read Case Study</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+        <!-- Call to Action -->
+        <div class="luxury-case-studies-cta">
+            <h2>Ready to Create Your Success Story?</h2>
+            <p>Join our growing list of satisfied clients who've transformed their business with immersive virtual experiences.</p>
+            <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="luxury-cta-button" target="_blank" rel="noopener">
+                <span>Start Your Project</span>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7 17L17 7M17 7H7M17 7V17"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
