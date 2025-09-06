@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Limavady High School - Virtual Tour Case Study</title>
-    <link rel="stylesheet" href="/style.css">
-    </head>
-    <body>
-        <nav class="navbar">
-    <div class="navbar__container">
-        <a href="/" class="navbar__logo">
-            <img src="/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
-            <img src="/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
-        </a>
-        <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
-            <span class="navbar__hamburger"></span>
-            <span class="navbar__hamburger"></span>
-            <span class="navbar__hamburger"></span>
-        </button>
-        <div class="navbar__menu-wrapper" id="navbar-menu">
-            <ul class="navbar__menu">
-                <li>
-                    <a href="#" class="navbar__link">Main Focus +</a>
-                </li>
-                <li>
-                    <a href="/case-studies/" class="navbar__link">Case Studies</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar__link">Careers</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar__link">Projects</a>
-                </li>
-            </ul>
-            <ul class="navbar__actions">
-                <li>
-                    <a href="#" class="site-btn">Contact us</a>
-                </li>
-            </ul>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limavady High School - Virtual Tour Case Study</title>
+    <link rel="stylesheet" href="/360new/style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="navbar__container">
+    <a href="/360new/" class="navbar__logo">
+      <img src="/360new/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
+      <img src="/360new/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
+    </a>
+    <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
+      <span class="navbar__hamburger"></span>
+      <span class="navbar__hamburger"></span>
+      <span class="navbar__hamburger"></span>
+    </button>
+    <div class="navbar__menu-wrapper" id="navbar-menu">
+      <ul class="navbar__menu">
+        <li>
+          <a href="#" class="navbar__link">Main Focus +</a>
+        </li>
+        <li>
+          <a href="/360new/case-studies/" class="navbar__link">Case Studies</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Careers</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Projects</a>
+        </li>
+      </ul>
+      <ul class="navbar__actions">
+        <li>
+          <a href="#" class="site-btn">Contact us</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 <script>
-    // Hamburger menu toggle
-    const navToggle = document.querySelector('.navbar__toggle');
-    const navMenu = document.getElementById('navbar-menu');
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', ! expanded);
-            navMenu.classList.toggle('navbar__menu--open');
-        });
-    }
+  // Hamburger menu toggle
+  const navToggle = document.querySelector('.navbar__toggle');
+  const navMenu = document.getElementById('navbar-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', ! expanded);
+      navMenu.classList.toggle('navbar__menu--open');
+    });
+  }
 </script>
-        <main>
-            
+    <main>
+      
 <section class="luxury-case-study">
   <div
     class="luxury-case-study-container">
@@ -83,7 +83,7 @@
     </div>
     <!-- Main Image Section -->
     <div class="luxury-case-study-image">
-      <img src="images/limavady-1.png" alt="Limavady High School Virtual Tour"/>
+      <img src="/360new/images/case-studies/lhs-hero.jpg" alt="Limavady High School Virtual Tour"/>
       <div class="luxury-image-overlay"></div>
     </div>
     <!-- Project Description -->
@@ -117,6 +117,43 @@
           <li>Seamless integration with the school's existing website</li>
         </ul>
       </div>
+      <!-- Image Grid Section -->
+      
+        <div class="luxury-content-section">
+          <h2>Explore the Campus</h2>
+          <div class="luxury-image-grid">
+            
+              <div class="luxury-grid-item">
+                <img src="/360new/images/case-studies/lhs-grid-1.jpg" alt="Main Entrance &amp; Reception" loading="lazy"/>
+                <div class="luxury-grid-overlay">
+                  <span class="luxury-grid-caption">Main Entrance &amp; Reception</span>
+                </div>
+              </div>
+            
+              <div class="luxury-grid-item">
+                <img src="/360new/images/case-studies/lhs-grid-2.jpg" alt="Technology &amp; STEM Area" loading="lazy"/>
+                <div class="luxury-grid-overlay">
+                  <span class="luxury-grid-caption">Technology &amp; STEM Area</span>
+                </div>
+              </div>
+            
+              <div class="luxury-grid-item">
+                <img src="/360new/images/case-studies/lhs-grid-3.jpg" alt="360° View of Entrance" loading="lazy"/>
+                <div class="luxury-grid-overlay">
+                  <span class="luxury-grid-caption">360° View of Entrance</span>
+                </div>
+              </div>
+            
+              <div class="luxury-grid-item">
+                <img src="/360new/images/case-studies/lhs-grid-4.jpg" alt="360° View of STEM Entrance" loading="lazy"/>
+                <div class="luxury-grid-overlay">
+                  <span class="luxury-grid-caption">360° View of STEM Entrance</span>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
       <!-- Testimonial Section -->
       <div class="luxury-testimonial-section">
         <div class="luxury-testimonial-content">
@@ -129,6 +166,31 @@
           </div>
         </div>
       </div>
+      <!-- Virtual Tour Showcase Section -->
+      
+        <div class="luxury-content-section virtual-tour-showcase">
+          <h2>Experience the Full Virtual Tour</h2>
+          <div class="virtual-tour-container">
+            <a href="https://360school.co.uk/lhs" target="_blank" rel="noopener noreferrer" class="virtual-tour-preview">
+              <img src="/360new/images/case-studies/lhs-tour-preview.jpg" alt="Virtual Tour Preview" class="tour-preview-image" loading="lazy"/>
+              <div class="tour-play-overlay">
+                <svg class="tour-play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5,3 19,12 5,21"/>
+                </svg>
+              </div>
+            </a>
+            <div class="virtual-tour-content">
+              <p class="tour-description">Experience the full immersive virtual tour of Limavady High School. Navigate through every classroom, corridor, and facility at your own pace.</p>
+              <a href="https://360school.co.uk/lhs" target="_blank" rel="noopener noreferrer" class="luxury-tour-button">
+                <span>Launch Virtual Tour</span>
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      
       <!-- Results Section -->
       <div class="luxury-content-section">
         <h2>Results</h2>
@@ -154,7 +216,7 @@
       <!-- Additional Image -->
       
         <div class="luxury-case-study-image luxury-secondary-image">
-          <img src="images/limavady-2.png" alt="Limavady High School Additional View"/>
+          <img src="/360new/images/limavady-2.png" alt="Limavady High School Additional View"/>
           <div class="luxury-image-caption">
             <p>Students and families can explore modern classrooms and specialized learning spaces through our immersive virtual
               tour experience.</p>
@@ -181,6 +243,6 @@
     </div>
   </div>
 </section>
-        </main>
-    </body>
+    </main>
+  </body>
 </html>

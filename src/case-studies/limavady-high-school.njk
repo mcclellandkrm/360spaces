@@ -5,11 +5,24 @@ description: "How 360° virtual tours transformed student engagement and accessi
 client: "Limavady High School"
 service: "Educational Virtual Tours"
 sector: "Education"
-heroImage: "images/limavady-1.png"
-secondaryImage: "images/limavady-2.png"
+heroImage: "/images/case-studies/lhs-hero.jpg"
+gridImages:
+  - image: "/images/case-studies/lhs-grid-1.jpg"
+    caption: "Main Entrance & Reception"
+  - image: "/images/case-studies/lhs-grid-2.jpg"
+    caption: "Technology & STEM Area"
+  - image: "/images/case-studies/lhs-grid-3.jpg"
+    caption: "360° View of Entrance"
+  - image: "/images/case-studies/lhs-grid-4.jpg"
+    caption: "360° View of STEM Entrance"
+secondaryImage: "/images/limavady-2.png"
 testimonialQuote: "The virtual tour has transformed how we engage with prospective families. It's increased our reach significantly and allows parents and students to get a genuine feel for our school environment before they visit."
 testimonialAuthor: "Sarah Mitchell"
 testimonialTitle: "Head of Admissions, Limavady High School"
+virtualTour:
+  previewImage: "/images/case-studies/lhs-tour-preview.jpg"
+  tourUrl: "https://360school.co.uk/LHS"
+  description: "Experience the full immersive virtual tour of Limavady High School. Navigate through every classroom, corridor, and facility at your own pace."
 stats:
   - number: "150%"
     label: "Increase in Virtual Visits"
@@ -49,7 +62,7 @@ permalink: "/case-studies/limavady-high-school/"
     </div>
     <!-- Main Image Section -->
     <div class="luxury-case-study-image">
-      <img src="{{ heroImage }}" alt="{{ client }} Virtual Tour"/>
+      <img src="{{ heroImage | url }}" alt="{{ client }} Virtual Tour"/>
       <div class="luxury-image-overlay"></div>
     </div>
     <!-- Project Description -->
@@ -83,6 +96,22 @@ permalink: "/case-studies/limavady-high-school/"
           <li>Seamless integration with the school's existing website</li>
         </ul>
       </div>
+      <!-- Image Grid Section -->
+      {% if gridImages and gridImages.length > 0 %}
+        <div class="luxury-content-section">
+          <h2>Explore the Campus</h2>
+          <div class="luxury-image-grid">
+            {% for gridImage in gridImages %}
+              <div class="luxury-grid-item">
+                <img src="{{ gridImage.image | url }}" alt="{{ gridImage.caption }}" loading="lazy"/>
+                <div class="luxury-grid-overlay">
+                  <span class="luxury-grid-caption">{{ gridImage.caption }}</span>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
       <!-- Testimonial Section -->
       <div class="luxury-testimonial-section">
         <div class="luxury-testimonial-content">
@@ -95,6 +124,31 @@ permalink: "/case-studies/limavady-high-school/"
           </div>
         </div>
       </div>
+      <!-- Virtual Tour Showcase Section -->
+      {% if virtualTour %}
+        <div class="luxury-content-section virtual-tour-showcase">
+          <h2>Experience the Full Virtual Tour</h2>
+          <div class="virtual-tour-container">
+            <a href="{{ virtualTour.tourUrl }}" target="_blank" rel="noopener noreferrer" class="virtual-tour-preview">
+              <img src="{{ virtualTour.previewImage | url }}" alt="Virtual Tour Preview" class="tour-preview-image" loading="lazy"/>
+              <div class="tour-play-overlay">
+                <svg class="tour-play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5,3 19,12 5,21"/>
+                </svg>
+              </div>
+            </a>
+            <div class="virtual-tour-content">
+              <p class="tour-description">{{ virtualTour.description }}</p>
+              <a href="{{ virtualTour.tourUrl }}" target="_blank" rel="noopener noreferrer" class="luxury-tour-button">
+                <span>Launch Virtual Tour</span>
+                <svg class="external-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
       <!-- Results Section -->
       <div class="luxury-content-section">
         <h2>Results</h2>
@@ -110,7 +164,7 @@ permalink: "/case-studies/limavady-high-school/"
       <!-- Additional Image -->
       {% if secondaryImage %}
         <div class="luxury-case-study-image luxury-secondary-image">
-          <img src="{{ secondaryImage }}" alt="{{ client }} Additional View"/>
+          <img src="{{ secondaryImage | url }}" alt="{{ client }} Additional View"/>
           <div class="luxury-image-caption">
             <p>Students and families can explore modern classrooms and specialized learning spaces through our immersive virtual
               tour experience.</p>

@@ -1,0 +1,209 @@
+To run
+
+
+npx @11ty/eleventy --serve
+
+
+
+to build to dist
+
+npm run build
+
+Forward-thinking businesses and organisations choose 360Spaces to capture, showcase, plan and transform their spaces
+
+To upload the changes:
+
+git status
+git add .
+git commit -m "notes on changes"
+git push origin main
+git status
+
+
+
+git branch -M main
+git remote add origin https://github.com/mcclellandkrm/360spaces.git
+git push -u origin main
+
+
+
+https://github.com/mcclellandkrm/360spaces.git
+
+
+
+If you want, just say:
+“I want to start a new Eleventy project in [folder name] with modular Nunjucks and static assets.”
+I can then generate all the setup steps, config, and starter files for you automatically!
+
+
+
+To build the site:
+npx eleventy
+
+To launch the local development server (localhost with live reload):
+npx eleventy --serve
+
+
+change the terminal directory
+
+
+This project was called kmporsche but I have renamed the parent folder to 360Spaces-Commercial-Website
+
+This now sits on my D drive at D:\PROJECTS_ROOM\360Spaces-Commercial-Website
+
+I want to change the stack used from Vite, React and Tailwind to something more suitable for the job and I'm thinking Eleventy with modular Nunjucks with Prettier
+
+
+Prompt
+
+A Galaxy S24 with an aerial photo of the outside garden centre area a large retail park store. The photo taken of the phone is outside the front entrance of the store at ground level.
+
+A large wall-mounted screen with a photo of the inside of a factory floor. The image on screen is a virtual tour with navigation arrows and menu. 
+
+The photo is taken from inside a busy office meeting room.
+
+
+A farmer at the rustic kitchen table with a coffee looking at his tablet which displays an aerial photo of his farm and surrounding fields. The image on his screen is a virtual tour with navigation arrows, menu and dimension lines. The table does not have any stand.
+
+
+
+
+
+Using Loveart.ai
+
+To save this design theme for recreating similar icon sets, I recommend documenting the following elements:
+
+Design System Documentation:
+
+Create a style guide documenting the color palette (blue/teal), typography, icon shapes (rounded), and connection style (subtle glowing lines)
+Note the circular arrangement pattern and proportions between central and satellite icons
+Prompt Template:
+
+Save the successful prompt structure we used, which includes:
+Central tablet screen description
+Six surrounding icon descriptions
+Connection style
+Color scheme and aesthetic direction
+Reference Images:
+
+Save the three generated images as visual references
+You can download these images from the links provided in our conversation
+Design Elements:
+
+Document the consistent elements across all sets: holographic elements, clean geometric shapes, glowing connections, and circular arrangement
+
+
+
+
+
+
+
+
+Concept: Focus on the idea of remote access and centralized control.
+
+A futuristic central tablet screen icon displaying and depicting a rendering of an interior space (a warehouse). 
+
+Around this central screen, 6 smaller, rounded icons show different views for data points. These are a person with a training manual, a checklist with three tick mark, a security camera feed, and a bar chart for inventory, a commercial drone and measurement tools. 
+
+These smaller icons are connected by subtle lines to the central main screen.
+
+Generate a warehouse management interface icon set with a central tablet screen showing a warehouse interior, surrounded by six smaller rounded icon - person with training manual, checklist with tick marks, security camera feed, bar chart for inventory, commercial drone, and measurement tools). These circular icons surround the main tablet and are connected by subtle lines. The overall aesthetic should be modern and cohesive. Colours are dark navy blue and teal lines.
+
+
+
+Generate a futuristic space planning interface icon set with a central tablet screen showing an open-plan office interior, surrounded by six smaller rounded icons (person with training manual, checklist with tick marks, bar chart, directional compass, budget/calculator icon, and measurement tools), all connected by subtle lines. The overall aesthetic should be futuristic and cohesive.
+
+Generate a futuristic exterior planning interface icon set with a central tablet screen showing an aerial view of a construction site, surrounded by six smaller rounded icons (person with training manual, excavation equipment, checklist with tick marks, health and safety officer, measurement tools, road signs), all connected by subtle lines. The overall aesthetic should be futuristic and cohesive.
+
+
+
+
+<div id="header-outer" data-has-menu="true" data-has-buttons="no" data-header-button_style="default" data-using-pr-menu="true" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#243c36" data-format="menu-left-aligned" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="0" data-header-resize="0" data-cart="false" data-transparency-option="0" data-box-shadow="none" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="40" data-m-logo-height="30" data-padding="30" data-full-width="true" data-condense="false" class="detached at-top">
+		
+<div id="search-outer" class="nectar">
+	<div id="search">
+		<div class="container">
+			 <div id="search-box">
+				 <div class="inner-wrap">
+					 <div class="col span_12">
+						  <form role="search" action="https://augerdubord.com/" method="GET">
+														 <input type="text" name="s" value="" aria-label="Search" placeholder="Search">
+							 
+						<span><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Hit enter to search or ESC to close</font></font></span>
+												</form>
+					</div><!--/span_12-->
+				</div><!--/inner-wrap-->
+			 </div><!--/search-box-->
+			 <div id="close"><a href="#"><span class="screen-reader-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Close Search</font></font></span>
+				<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span>				 </a></div>
+		 </div><!--/container-->
+	</div><!--/search-->
+</div><!--/search-outer-->
+
+<header id="top">
+	<div class="container">
+		<div class="row">
+			<div class="col span_3">
+								<a id="logo" href="https://augerdubord.com" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+					<img class="stnd skip-lazy dark-version" width="0" height="0" alt="Auger Dubord land surveyors" src="https://augerdubord.com/wp-content/uploads/2025/02/augerdubord-logo.svg">				</a>
+							</div><!--/span_3-->
+
+			<div class="col span_9 col_last">
+									<div class="nectar-mobile-only mobile-header"><div class="inner"></div></div>
+													<div class="slide-out-widget-area-toggle mobile-icon fullscreen-alt" data-custom-color="false" data-icon-animation="simple-transform">
+						<div> <a href="#slide-out-widget-area" role="button" aria-label="Navigation Menu" aria-expanded="false" class="closed">
+							<span class="screen-reader-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Menu</font></font><i class="lines-button x2 hover-effect"> <i class="lines"></i> </i><span class="close-wrap loaded"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span></span><span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> <i class="lines-button x2 hover-effect"> <i class="lines"></i> </i><span class="close-wrap loaded"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span></span>						</a></div>
+					</div>
+				
+									<nav aria-label="Main Menu">
+													<ul class="sf-menu sf-js-enabled sf-arrows">
+								<li id="menu-item-304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nectar-regular-menu-item menu-item-304"><a aria-haspopup="true" aria-expanded="false" class="sf-with-ul"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Our services +</font></font></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-306"><a href="https://augerdubord.com/service/certification-de-localisation/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Certificate of location</font></font></span></a></li>
+	<li id="menu-item-312" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-312"><a href="https://augerdubord.com/service/plan-projet-dimplantation/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Implementation project plan</font></font></span></a></li>
+	<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-309"><a href="https://augerdubord.com/service/lotissement/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Subdivision</font></font></span></a></li>
+	<li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-310"><a href="https://augerdubord.com/service/operation-cadastrale/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cadastral operation</font></font></span></a></li>
+	<li id="menu-item-305" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-305"><a href="https://augerdubord.com/service/bornage-a-lamiable/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Amicable boundary marking</font></font></span></a></li>
+	<li id="menu-item-307" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-307"><a href="https://augerdubord.com/service/copropriete-divise/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Divided co-ownership</font></font></span></a></li>
+	<li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-308"><a href="https://augerdubord.com/service/description-technique/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Technical description</font></font></span></a></li>
+	<li id="menu-item-311" class="menu-item menu-item-type-post_type menu-item-object-service nectar-regular-menu-item menu-item-311"><a href="https://augerdubord.com/service/piquetage/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Picketing</font></font></span></a></li>
+</ul>
+</li>
+<li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-279"><a href="https://augerdubord.com/a-propos/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">About</font></font></span></a></li>
+<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-280"><a href="https://augerdubord.com/carrieres/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Careers</font></font></span></a></li>
+<li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-281"><a href="https://augerdubord.com/nous-joindre/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Contact us</font></font></span></a></li>
+							</ul>
+						
+					</nav>
+
+					
+				</div><!--/span_9-->
+
+									<div class="right-aligned-menu-items">
+						<nav>
+							<ul class="buttons sf-menu" data-user-set-ocm="off">
+
+								<li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-603"><a href="https://augerdubord.com/paiement/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Payment</font></font></span></a></li>
+<li id="menu-item-282" class="btn_menu menu-item menu-item-type-post_type menu-item-object-page button_solid_color menu-item-282"><a href="https://augerdubord.com/soumission/"><span class="menu-title-text"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Submission</font></font></span></a></li>
+
+							</ul>
+
+													</nav>
+					</div><!--/right-aligned-menu-items-->
+
+					
+			</div><!--/row-->
+					</div><!--/container-->
+	</header>		
+	<div class="bg-color-stripe"></div></div>
+
+
+
+
+
+
+
+
+
+
+

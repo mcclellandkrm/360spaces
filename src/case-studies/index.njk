@@ -22,7 +22,7 @@ permalink: "/case-studies/"
             {% for study in caseStudies %}
                 <article class="luxury-case-study-card">
                     <div class="luxury-case-study-card-image">
-                        <img src="{{ study.data.heroImage }}" alt="{{ study.data.client }} Case Study"/>
+                        <img src="{{ study.data.heroImage | url }}" alt="{{ study.data.client }} Case Study"/>
                         <div class="luxury-case-study-card-overlay">
                             <span class="luxury-case-study-sector">{{ study.data.sector }}</span>
                         </div>
@@ -31,7 +31,7 @@ permalink: "/case-studies/"
                         <h2 class="luxury-case-study-card-title">{{ study.data.client }}</h2>
                         <p class="luxury-case-study-card-service">{{ study.data.service }}</p>
                         <p class="luxury-case-study-card-description">{{ study.data.description }}</p>
-                        <a href="{{ study.url }}" class="luxury-case-study-card-link">
+                        <a href="{{ study.url | url }}" class="luxury-case-study-card-link">
                             <span>Read Case Study</span>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path

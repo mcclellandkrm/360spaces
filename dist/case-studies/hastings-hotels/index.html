@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hastings Hotels Virtual Experience - 360spaces Case Study</title>
-    <link rel="stylesheet" href="/style.css">
-    </head>
-    <body>
-        <nav class="navbar">
-    <div class="navbar__container">
-        <a href="/" class="navbar__logo">
-            <img src="/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
-            <img src="/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
-        </a>
-        <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
-            <span class="navbar__hamburger"></span>
-            <span class="navbar__hamburger"></span>
-            <span class="navbar__hamburger"></span>
-        </button>
-        <div class="navbar__menu-wrapper" id="navbar-menu">
-            <ul class="navbar__menu">
-                <li>
-                    <a href="#" class="navbar__link">Main Focus +</a>
-                </li>
-                <li>
-                    <a href="/case-studies/" class="navbar__link">Case Studies</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar__link">Careers</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar__link">Projects</a>
-                </li>
-            </ul>
-            <ul class="navbar__actions">
-                <li>
-                    <a href="#" class="site-btn">Contact us</a>
-                </li>
-            </ul>
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastings Hotels Virtual Experience - 360spaces Case Study</title>
+    <link rel="stylesheet" href="/360new/style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="navbar__container">
+    <a href="/360new/" class="navbar__logo">
+      <img src="/360new/images/360spaces-logo-full.svg" class="navbar__logo--full" alt="360spaces logo full"/>
+      <img src="/360new/images/360spaces-logo-sans.svg" class="navbar__logo--sans" alt="360spaces logo sans"/>
+    </a>
+    <button class="navbar__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbar-menu">
+      <span class="navbar__hamburger"></span>
+      <span class="navbar__hamburger"></span>
+      <span class="navbar__hamburger"></span>
+    </button>
+    <div class="navbar__menu-wrapper" id="navbar-menu">
+      <ul class="navbar__menu">
+        <li>
+          <a href="#" class="navbar__link">Main Focus +</a>
+        </li>
+        <li>
+          <a href="/360new/case-studies/" class="navbar__link">Case Studies</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Careers</a>
+        </li>
+        <li>
+          <a href="#" class="navbar__link">Projects</a>
+        </li>
+      </ul>
+      <ul class="navbar__actions">
+        <li>
+          <a href="#" class="site-btn">Contact us</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 <script>
-    // Hamburger menu toggle
-    const navToggle = document.querySelector('.navbar__toggle');
-    const navMenu = document.getElementById('navbar-menu');
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', ! expanded);
-            navMenu.classList.toggle('navbar__menu--open');
-        });
-    }
+  // Hamburger menu toggle
+  const navToggle = document.querySelector('.navbar__toggle');
+  const navMenu = document.getElementById('navbar-menu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', ! expanded);
+      navMenu.classList.toggle('navbar__menu--open');
+    });
+  }
 </script>
-        <main>
-            
+    <main>
+      
 <section class="luxury-case-study">
   <div
     class="luxury-case-study-container">
@@ -177,6 +177,6 @@
     </div>
   </div>
 </section>
-        </main>
-    </body>
+    </main>
+  </body>
 </html>
