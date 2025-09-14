@@ -901,8 +901,8 @@ text-decoration: none !important;
 }
 .navbar__logo img {
   width: auto;
-  height: 4rem;
-  max-width: 320px;
+  height: 5rem;
+  max-width: 400px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -910,8 +910,8 @@ text-decoration: none !important;
 /* --- Navbar Logo Switching: Only one logo visible at a time --- */
 .navbar__logo--full {
   display: inline-block !important;
-  height: 4rem;
-  max-width: 320px;
+  height: 5rem;
+  max-width: 400px;
 }
 .navbar__logo--sans { display: none !important; }
 
@@ -1097,33 +1097,15 @@ text-decoration: none !important;
     max-width: 100%;
   }
 }
-/* Navbar logo switching for responsive */
-.navbar__logo img {
-  max-height: 3rem;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-
-
-/* Navbar logo switching for responsive */
-.navbar__logo img {
-  max-height: 3rem;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 
 @media (max-width: 1024px) {
   .navbar__logo img {
-    max-height: 2.2rem;
+    max-height: 5rem;
   }
   .navbar__logo--full { display: none !important; }
   .navbar__logo--sans {
     display: inline-block !important;
-    max-width: 110px;
+    max-width: 250px;
     height: auto;
   }
 }
@@ -2941,15 +2923,6 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   align-items: center;
   justify-content: space-between;
   padding: 0.7rem 2rem;
-}
-.navbar__logo {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
 }
 .navbar__plus {
   font-size: 1.2em;
@@ -5418,4 +5391,131 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
     width: 24px;
     height: 24px;
   }
+}
+
+/* Animated Icons for Vertical Panels */
+.luxury-card-icon {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card-icon svg {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-origin: center;
+}
+
+/* Hover animations for each card type */
+.luxury-card-1:hover .luxury-card-icon svg {
+  animation: shieldPulse 2s ease-in-out infinite;
+}
+
+.luxury-card-2:hover .luxury-card-icon lottie-player {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.luxury-card-3:hover .luxury-card-icon svg {
+  animation: pulseBeat 1.5s ease-in-out infinite;
+}
+
+.luxury-card-4:hover .luxury-card-icon svg {
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+/* Individual icon animations */
+@keyframes shieldPulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(108, 92, 231, 0.4));
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(108, 92, 231, 0.6));
+  }
+}
+
+@keyframes documentSway {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+  }
+  25% { 
+    transform: rotate(-2deg) scale(1.02);
+  }
+  75% { 
+    transform: rotate(2deg) scale(1.02);
+  }
+}
+
+@keyframes pulseBeat {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1);
+    filter: brightness(1);
+  }
+  33% { 
+    transform: rotate(5deg) scale(1.05);
+    filter: brightness(1.2);
+  }
+  66% { 
+    transform: rotate(-5deg) scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Entrance animations when scrolling into view */
+.luxury-vertical-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.luxury-card-1 { animation-delay: 0.1s; }
+.luxury-card-2 { animation-delay: 0.2s; }
+.luxury-card-3 { animation-delay: 0.3s; }
+.luxury-card-4 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle continuous animations */
+.luxury-card-icon svg path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawIcon 2s ease-in-out forwards;
+}
+
+.luxury-card-1 .luxury-card-icon svg path { animation-delay: 0.5s; }
+.luxury-card-2 .luxury-card-icon svg path { animation-delay: 0.7s; }
+.luxury-card-3 .luxury-card-icon svg path { animation-delay: 0.9s; }
+.luxury-card-4 .luxury-card-icon svg path { animation-delay: 1.1s; }
+
+@keyframes drawIcon {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Enhanced hover effects for the entire card */
+.luxury-vertical-card:hover {
+  transform: translateY(-8px);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.luxury-vertical-card:hover .luxury-card-icon {
+  transform: scale(1.1);
 }
