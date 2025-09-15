@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>
+      {% if title %}
+        {{ title }} |
+      {% endif %}360spaces - Virtual Tours & Space Technology Solutions</title>
+    <meta
+      name="description"
+      content="Transform your spaces with 360° virtual tour technology. Professional virtual tours, space analysis, and
+        immersive experiences for businesses across Ireland and the UK.">
+    <meta
+      name="keywords"
+      content="360 virtual tours, virtual reality, space technology, VR tours, property tours, business tours, 360 photography,
+        immersive experiences">
+    <meta name="author" content="360spaces">
+    <meta property="og:title" content="360spaces - Virtual Tours & Space Technology Solutions">
+    <meta
+      property="og:description"
+      content="Transform your spaces with professional 360° virtual tour technology. Immersive experiences for businesses
+        across Ireland and the UK.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://360spaces.co.uk">
+    <meta property="og:site_name" content="360spaces">
+    <link rel="canonical" href="https://360spaces.co.uk{{ page.url }}">
     <link rel="stylesheet" href="{{ '/style.css' | url }}">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>

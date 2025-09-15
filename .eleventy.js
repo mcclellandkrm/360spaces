@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/style.css");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/video");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
     dir: {
@@ -11,7 +12,6 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    templateFormats: ["html", "njk", "md"],
-    pathPrefix: "/360new/"
+    templateFormats: ["html", "njk", "md"]
   };
 };
