@@ -5484,7 +5484,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   animation: shieldPulse 2s ease-in-out infinite;
 }
 
-.luxury-card-2:hover .luxury-card-icon lottie-player {
+.luxury-card-2:hover .luxury-card-icon img {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
