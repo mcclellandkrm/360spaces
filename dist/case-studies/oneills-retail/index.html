@@ -41,8 +41,14 @@
     </button>
     <div class="navbar__menu-wrapper" id="navbar-menu">
       <ul class="navbar__menu">
-        <li>
-          <a href="#" class="navbar__link">Main Focus +</a>
+        <li class="navbar__dropdown">
+          <a href="#" class="navbar__link navbar__dropdown-toggle">Main Focus +</a>
+          <ul class="navbar__dropdown-menu">
+            <li><a href="/main-focus/marketing-business-development/" class="navbar__dropdown-link">Marketing & Business Development</a></li>
+            <li><a href="#" class="navbar__dropdown-link">Operational Efficiency & Planning</a></li>
+            <li><a href="#" class="navbar__dropdown-link">Customer Experience & Accessibility</a></li>
+            <li><a href="#" class="navbar__dropdown-link">Sector-Specific Applications</a></li>
+          </ul>
         </li>
         <li>
           <a href="/case-studies/" class="navbar__link">Case Studies</a>
@@ -73,6 +79,30 @@
       navMenu.classList.toggle('navbar__menu--open');
     });
   }
+
+  // Dropdown menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.navbar__dropdown');
+    const dropdownToggle = document.querySelector('.navbar__dropdown-toggle');
+    const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
+
+    if (dropdown && dropdownToggle && dropdownMenu) {
+      // Handle dropdown click on mobile
+      dropdownToggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdownMenu.style.display = 'none';
+        }
+      });
+    }
+  });
 </script>
     <main>
       
