@@ -899,8 +899,8 @@
 }
 .navbar__logo img {
   width: auto;
-  height: 5rem;
-  max-width: 400px;
+  height: 3.5rem;
+  max-width: 280px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -908,8 +908,8 @@
 /* --- Navbar Logo Switching: Only one logo visible at a time --- */
 .navbar__logo--full {
   display: inline-block !important;
-  height: 5rem;
-  max-width: 400px;
+  height: 3.5rem;
+  max-width: 280px;
 }
 .navbar__logo--sans { display: none !important; }
 
@@ -917,7 +917,7 @@
   .navbar__logo--full { display: none !important; }
   .navbar__logo--sans {
     display: inline-block !important;
-    max-width: 280px;
+    max-width: 180px;
     height: auto;
   }
 }
@@ -927,8 +927,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -1109,11 +1109,11 @@
 }
 /* Removed orphaned CSS block that was breaking the stylesheet */
 .navbar__hamburger {
-  width: 2rem;
-  height: 0.12rem;
-  background: #58C4C5;
+  width: 1.5rem;
+  height: 0.1rem;
+  background: #6c5ce7;
   border-radius: 1px;
-  margin: 0.18rem 0;
+  margin: 0.15rem 0;
   transition: all 0.3s;
   display: block;
 }
@@ -1151,6 +1151,13 @@
   }
   .navbar__container {
     position: relative;
+  }
+  /* Smaller logo for mobile */
+  .navbar__logo img {
+    max-height: 2.5rem;
+  }
+  .navbar__logo--sans {
+    max-width: 120px !important;
   }
 }
 /* Footer Component Styles */
@@ -5018,11 +5025,11 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-studies-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
   font-weight: 300;
   line-height: 1.1;
   color: #ffffff;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5031,9 +5038,9 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-studies-subtitle {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+  line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -5643,6 +5650,9 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .projects-panels {
   position: relative;
   min-height: 600px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .projects-panel {
@@ -5654,6 +5664,9 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   left: 0;
   right: 0;
   pointer-events: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .projects-panel.active {
@@ -5673,10 +5686,14 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   padding: 3rem;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(88, 196, 197, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .project-info {
   margin-bottom: 1.5rem;
+  min-width: 0; /* Allows flex items to shrink below content size */
 }
 
 .project-category {
@@ -5694,18 +5711,22 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .project-title {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-description {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
   color: #4a5568;
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .project-features {
@@ -5834,20 +5855,21 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-section-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   
   /* Reduce spacing on mobile for projects page */
   .projects-page .luxury-case-studies-index {
-    padding: 60px 0 0px;
+    padding: 30px 0 0px;
   }
   
   .projects-page .luxury-case-studies-hero {
     margin-bottom: 0px;
+    padding: 0 1rem;
   }
   
   .projects-showcase {
-    padding: 1rem 0 4rem;
+    padding: 0.75rem 0 3rem;
   }
   
   .projects-tabs-nav {
@@ -5867,20 +5889,38 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   
   .project-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
-  .project-title {
-    font-size: 1.75rem;
+  .project-info {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .project-image-placeholder {
-    height: 250px;
+    height: 220px;
   }
   
   .projects-container {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .project-feature-text h4 {
+    font-size: 1rem;
+  }
+  
+  .project-feature-text p {
+    font-size: 0.9rem;
   }
 }
 
