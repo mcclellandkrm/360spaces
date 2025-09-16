@@ -6152,12 +6152,16 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .focus-benefits-section {
   padding: 6rem 0;
   background: #faf9f6;
+  position: relative;
+  overflow: hidden;
 }
 
 .focus-benefits-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .focus-benefits-header {
@@ -6182,18 +6186,19 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .focus-benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }
 
 .focus-benefit-card {
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
   border-radius: var(--radius-card);
   padding: 2rem;
   border: 1px solid rgba(108, 92, 231, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.05);
 }
 
 .focus-benefit-card::before {
@@ -6203,37 +6208,42 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(108, 92, 231, 0.02) 0%, rgba(79, 70, 229, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.08) 0%, rgba(88, 196, 197, 0.05) 100%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .focus-benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(108, 92, 231, 0.15);
-  border-color: rgba(108, 92, 231, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(108, 92, 231, 0.2);
+  border-color: rgba(108, 92, 231, 0.4);
 }
 
 .focus-benefit-card:hover::before {
   opacity: 1;
 }
 
-.focus-benefit-icon {
+.focus-benefit-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, rgba(108, 92, 231, 0.15) 0%, rgba(79, 70, 229, 0.1) 100%);
-  border-radius: var(--radius-button);
+  background: linear-gradient(135deg, #6C5CE7 0%, #74B9FF 100%);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(108, 92, 231, 0.2);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+  transition: all 0.3s ease;
 }
 
-.focus-benefit-icon svg {
-  width: 28px;
-  height: 28px;
-  color: #6c5ce7;
+.focus-benefit-card:hover .focus-benefit-number {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(108, 92, 231, 0.4);
 }
 
 .focus-benefit-card h3 {

@@ -44,10 +44,18 @@
         <li class="navbar__dropdown">
           <a href="#" class="navbar__link navbar__dropdown-toggle">Main Focus +</a>
           <ul class="navbar__dropdown-menu">
-            <li><a href="/main-focus/marketing-business-development/" class="navbar__dropdown-link">Marketing & Business Development</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Operational Efficiency & Planning</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Customer Experience & Accessibility</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Sector-Specific Applications</a></li>
+            <li>
+              <a href="/main-focus/marketing-business-development/" class="navbar__dropdown-link">Marketing & Business Development</a>
+            </li>
+            <li>
+              <a href="/main-focus/operational-efficiency-planning/" class="navbar__dropdown-link">Operational Efficiency & Planning</a>
+            </li>
+            <li>
+              <a href="/main-focus/customer-experience-accessibility/" class="navbar__dropdown-link">Customer Experience & Accessibility</a>
+            </li>
+            <li>
+              <a href="#" class="navbar__dropdown-link">Sector-Specific Applications</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -69,200 +77,252 @@
   </div>
 </nav>
 <script>
-  // Hamburger menu toggle
-  const navToggle = document.querySelector('.navbar__toggle');
-  const navMenu = document.getElementById('navbar-menu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function () {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', ! expanded);
-      navMenu.classList.toggle('navbar__menu--open');
-    });
-  }
-
-  // Dropdown menu functionality
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () { // Hamburger menu toggle
+    const navToggle = document.querySelector('.navbar__toggle');
+    const navMenu = document.getElementById('navbar-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', function () {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', ! expanded);
+        navMenu.classList.toggle('navbar__menu--open');
+      });
+    }
+    // Dropdown menu functionality
     const dropdown = document.querySelector('.navbar__dropdown');
     const dropdownToggle = document.querySelector('.navbar__dropdown-toggle');
     const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
-
-    if (dropdown && dropdownToggle && dropdownMenu) {
-      // Handle dropdown click on mobile
-      dropdownToggle.addEventListener('click', function(e) {
+    if (dropdown && dropdownToggle && dropdownMenu) { // Handle dropdown click for both mobile and desktop
+      dropdownToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        // For mobile (768px and below)
         if (window.innerWidth <= 768) {
-          e.preventDefault();
-          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+          const isVisible = dropdownMenu.style.display === 'block';
+          dropdownMenu.style.display = isVisible
+            ? 'none'
+            : 'block';
+        } else { // For desktop, toggle visibility
+          const isVisible = dropdownMenu.style.opacity === '1' || window.getComputedStyle(dropdownMenu).opacity === '1';
+          if (isVisible) {
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.transform = 'translateY(-10px)';
+          } else {
+            dropdownMenu.style.opacity = '1';
+            dropdownMenu.style.visibility = 'visible';
+            dropdownMenu.style.transform = 'translateY(0)';
+          }
         }
       });
-
       // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!dropdown.contains(e.target)) {
+      document.addEventListener('click', function (e) {
+          if (! dropdown.contains(e.target)) {
+            if (
+              window.innerWidth<= 768) {
           dropdownMenu.style.display = 'none';
+        } else {
+          dropdownMenu.style.opacity = '0';
+          dropdownMenu.style.visibility = 'hidden';
+          dropdownMenu.style.transform = 'translateY(-10px)';
         }
-      });
-    }
-  });
-</script>
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth> 768
+            ) {
+              dropdownMenu.style.display = '';
+            } else {
+              dropdownMenu.style.opacity = '';
+              dropdownMenu.style.visibility = '';
+              dropdownMenu.style.transform = '';
+            }
+          }
+        );
+      }
+    });
+    </script>
     <main>
       
 <section class="focus-page-hero">
-  <div class="focus-hero-container">
-    <div class="focus-hero-content">
-      <span class="focus-hero-category">Strategic Growth</span>
-      <h1 class="focus-hero-title">Marketing & Business Development</h1>
-      <p class="focus-hero-description">
-        Transform your competitive positioning with immersive technology that converts prospects faster, closes deals 
-        stronger, and positions your organization as the innovation leader in your sector.
-      </p>
-      <p class="focus-hero-description">
-        Forward-thinking leaders understand that differentiation comes through experience. Our 360° solutions don't just 
-        showcase your capabilities—they demonstrate your commitment to innovation, transparency, and customer excellence. 
-        This positions you ahead of competitors still relying on traditional marketing approaches.
-      </p>
-    </div>
-    <div class="focus-hero-visual">
-      <img src="/images/panelgraphicnew.png" alt="Marketing Strategy Visualization" />
-      <div class="focus-hero-overlay"></div>
-    </div>
-  </div>
-</section>
-
-<section class="focus-benefits-section">
-  <div class="focus-benefits-container">
-    <div class="focus-benefits-header">
-      <h2>Strategic Marketing Advantages</h2>
-      <p>Six critical areas where immersive technology transforms your marketing effectiveness and business development outcomes.</p>
-    </div>
-    
-    <div class="focus-benefits-grid">
-      <!-- Key Benefits -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Key Benefits</h3>
-        <p>Accelerate decision-making with immersive experiences that reduce sales cycles by 40%. Prospects can virtually experience your offerings before commitment, building confidence and reducing objections.</p>
-        <ul>
-          <li>Faster prospect conversion</li>
-          <li>Reduced sales cycle length</li>
-          <li>Higher-quality qualified leads</li>
-          <li>Increased deal closure rates</li>
-        </ul>
-      </div>
-
-      <!-- Enhanced Engagement & Brand Reputation -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Enhanced Engagement & Brand Reputation</h3>
-        <p>Position your brand as innovative and forward-thinking. Interactive 360° experiences create memorable touchpoints that prospects associate with technological leadership and customer-centric approach.</p>
-        <ul>
-          <li>Memorable brand experiences</li>
-          <li>Innovation leadership positioning</li>
-          <li>Increased social sharing and referrals</li>
-          <li>Enhanced digital presence</li>
-        </ul>
-      </div>
-
-      <!-- Wider Audience Reach -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-            <path d="M8 12h8" stroke="currentColor" stroke-width="2"/>
-            <path d="M12 8v8" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </div>
-        <h3>Wider Audience Reach</h3>
-        <p>Break geographical barriers and accessibility limitations. Virtual tours enable global prospect engagement, 24/7 availability, and inclusive experiences that reach audiences previously excluded from traditional showcases.</p>
-        <ul>
-          <li>Global accessibility without travel</li>
-          <li>24/7 availability for prospects</li>
-          <li>Inclusive design for all abilities</li>
-          <li>Cost-effective market expansion</li>
-        </ul>
-      </div>
-
-      <!-- Competitive Differentiation -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Competitive Differentiation</h3>
-        <p>Stand apart from competitors using traditional marketing methods. Immersive technology demonstrates your commitment to innovation and positions you as the progressive choice in your industry.</p>
-        <ul>
-          <li>Unique value proposition</li>
-          <li>Technology leadership demonstration</li>
-          <li>Progressive brand positioning</li>
-          <li>First-mover advantage in sector</li>
-        </ul>
-      </div>
-
-      <!-- Data-Driven Insights -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Data-Driven Insights</h3>
-        <p>Gain unprecedented visibility into prospect behavior and interests. Analytics reveal which areas generate most engagement, enabling refined marketing strategies and personalized follow-up approaches.</p>
-        <ul>
-          <li>Detailed engagement analytics</li>
-          <li>Prospect behavior insights</li>
-          <li>Optimized marketing strategies</li>
-          <li>Personalized sales approaches</li>
-        </ul>
-      </div>
-
-      <!-- Scalable Marketing Asset -->
-      <div class="focus-benefit-card">
-        <div class="focus-benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2"/>
-            <polyline points="3.27,6.96 12,12.01 20.73,6.96" stroke="currentColor" stroke-width="2"/>
-            <line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </div>
-        <h3>Scalable Marketing Asset</h3>
-        <p>Create once, deploy everywhere. Virtual tours serve multiple marketing functions—from website integration to trade show presentations, sales meetings to social media campaigns—maximizing your marketing investment ROI.</p>
-        <ul>
-          <li>Multi-channel deployment</li>
-          <li>Consistent brand experience</li>
-          <li>Reduced marketing production costs</li>
-          <li>Evergreen marketing content</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="focus-cta-section">
-  <div class="focus-cta-container">
-    <div class="focus-cta-content">
-      <h2>Ready to Transform Your Marketing Strategy?</h2>
-      <p>Join forward-thinking leaders who are using immersive technology to accelerate growth and outpace their competition.</p>
-      <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="focus-cta-button" target="_blank" rel="noopener">
-        <span>Schedule Strategic Consultation</span>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer-section">
+    <div class="focus-hero-container">
+        <div class="focus-hero-content">
+            <span class="focus-hero-category">Strategic Growth</span>
+            <h1 class="focus-hero-title">Marketing & Business Development</h1>
+            <p class="focus-hero-description">
+                Virtual tours are no longer just a novelty; they are a strategic asset that transforms how you attract, engage, and
+                convert your audience.
+                <br>
+                    <br>
+                        By creating a fully immersive, high-quality 360 model of your physical space, you're not just showing your business but
+                        are opening it up to a world of new opportunities.
+                        <br>
+                            <br>A virtual tour gives your marketing and sales efforts a competitive edge, driving tangible results that go straight
+                                to your bottom line.
+                            </p>
+                        </div>
+                        <div class="focus-hero-visual">
+                            <img src="/images/panelgraphicnew.png" alt="Marketing Strategy Visualization"/>
+                            <div class="focus-hero-overlay"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="focus-benefits-section">
+                    <div class="parallax-background flowing-waves"></div>
+                    <div class="focus-benefits-container">
+                        <div class="focus-benefits-header">
+                            <h2>Key Benefits</h2>
+                        </div>
+                        <div
+                            class="focus-benefits-grid">
+                            <!-- Enhanced Engagement & Brand Reputation -->
+                            <div class="focus-benefit-card">
+                                <div class="focus-benefit-number">01</div>
+                                <h3>Enhanced Engagement & Brand Reputation</h3>
+                                <p>Stop relying on static images and passive videos. A virtual tour provides an immersive, interactive experience that
+                                    captivates your audience.
+                                    <p>This dynamic engagement builds a deeper, more emotional connection with your brand, positioning you as an innovator
+                                        and a leader.
+                                        <p>By keeping visitors on your site longer, you boost your online visibility and build a strong foundation for future
+                                            business.</p>
+                                        <ul>
+                                            <li>Drives deeper engagement</li>
+                                            <li>Builds brand credibility</li>
+                                            <li>Increases time on site</li>
+                                            <li>Creates a foundation for future business</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Wider Audience Reach -->
+                                    <div class="focus-benefit-card">
+                                        <div class="focus-benefit-number">02</div>
+                                        <h3>Wider Audience Reach</h3>
+                                        <p>Tear down the geographical walls that limit your business.
+                                            <p>A virtual tour gives you a global reach, allowing potential customers, clients, or students from across the street or
+                                                across the world to explore your physical space at their convenience.
+                                                <p>This is a game-changer for businesses targeting international markets, from global retail brands and universities to
+                                                    commercial real estate firms seeking overseas investors.</p>
+                                                <ul>
+                                                    <li>Breaks down geographical barriers</li>
+                                                    <li>Connects with a global audience</li>
+                                                    <li>Offers 24/7 accessibility</li>
+                                                    <li>Attracts new potential customers and clients</li>
+                                                </ul>
+                                            </div>
+                                            <!-- Showcasing Unique Selling Points -->
+                                            <div class="focus-benefit-card">
+                                                <div class="focus-benefit-number">03</div>
+                                                <h3>Showcasing Unique Selling Points</h3>
+                                                <p>Go beyond simply showing your space but highlight what makes it special.<p>With interactive "hotspots" and embedded
+                                                    media, you can strategically guide visitors to your most valuable features.
+                                                        <p>Showcase a new product line with embedded videos, provide detailed specifications for a luxury item, or highlight a
+                                                            limited-edition collection. A virtual tour transforms into a powerful, interactive sales presentation that works for you
+                                                            24/7.</p>
+                                                        <ul>
+                                                            <li>Turns a tour into a sales tool</li>
+                                                            <li>Provides detailed product information</li>
+                                                            <li>Acts as an interactive sales presentation</li>
+                                                            <li>Highlights unique features and offerings</li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Lead Qualification & Conversion -->
+                                                    <div class="focus-benefit-card">
+                                                        <div class="focus-benefit-number">04</div>
+                                                        <h3>Lead Qualification & Conversion</h3>
+                                                        <p>Filter your prospects from the start.
+                                                            <p>A virtual tour acts as a powerful pre-qualification tool, ensuring that the people who reach out to you are genuinely
+                                                                interested and have a clear understanding of your offering.<p>
+                                                                    This leads to a more efficient sales funnel, a shorter sales cycle, and a higher conversion rate, allowing your team to
+                                                                    focus on closing deals with the most promising leads.</p>
+                                                                <ul>
+                                                                    <li>Attracts genuinely interested prospects</li>
+                                                                    <li>Ensures a clear understanding of your offering</li>
+                                                                    <li>Leads to a higher conversion rate</li>
+                                                                    <li>Helps your team close more deals</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <section class="focus-cta-section">
+                                                    <div class="focus-cta-container">
+                                                        <div class="focus-cta-content">
+                                                            <h2>Ready to Transform Your Marketing Strategy?</h2>
+                                                            <p>Join forward-thinking leaders who are using immersive technology to accelerate growth and outpace their competition.</p>
+                                                            <a href="https://cal.com/karl-mcclelland-m2ppu8/" class="focus-cta-button" target="_blank" rel="noopener">
+                                                                <span>Schedule Strategic Consultation</span>
+                                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M7 17L17 7M17 7H7M17 7V17"
+                                                                        stroke="currentColor"
+                                                                        stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round"/>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <script>
+                                                    document.addEventListener('DOMContentLoaded', function () {
+                                                        const parallaxElement = document.querySelector('.parallax-background');
+                                                        if (parallaxElement) {
+                                                            function updateParallax() {
+                                                                const scrolled = window.pageYOffset;
+                                                                const section = document.querySelector('.focus-benefits-section');
+                                                                const sectionTop = section.offsetTop;
+                                                                const sectionHeight = section.offsetHeight;
+                                                                const windowHeight = window.innerHeight;
+                                                                // Only animate when section is in view
+                                                                if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + sectionHeight) {
+                                                                    const yPos = -(scrolled - sectionTop) * 0.2;
+                                                                    parallaxElement.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                                                                }
+                                                            }
+                                                            // Throttle scroll events for better performance
+                                                            let ticking = false;
+                                                            function requestTick() {
+                                                                if (! ticking) {
+                                                                    requestAnimationFrame(updateParallax);
+                                                                    ticking = true;
+                                                                }
+                                                            }
+                                                            window.addEventListener('scroll', function () {
+                                                                requestTick();
+                                                                ticking = false;
+                                                            });
+                                                        }
+                                                        // Animate cards on scroll
+                                                        const observerOptions = {
+                                                            threshold: 0.1,
+                                                            rootMargin: '0px 0px -50px 0px'
+                                                        };
+                                                        const observer = new IntersectionObserver((entries) => {
+                                                            entries.forEach((entry) => {
+                                                                if (entry.isIntersecting) {
+                                                                    entry
+                                                                        .target
+                                                                        .style
+                                                                        .opacity = '1';
+                                                                    entry
+                                                                        .target
+                                                                        .style
+                                                                        .transform = 'translateY(0)';
+                                                                }
+                                                            });
+                                                        }, observerOptions);
+                                                        document.querySelectorAll('.focus-benefit-card').forEach((card, index) => {
+                                                            card.style.opacity = '0';
+                                                            card.style.transform = 'translateY(30px)';
+                                                            card.style.transition = `opacity 0.6s ease ${
+                                                                index * 0.1
+                                                            }s, transform 0.6s ease ${
+                                                                index * 0.1
+                                                            }s`;
+                                                            observer.observe(card);
+                                                        });
+                                                    });
+                                                </script>
+                                                <footer class="footer-section">
   <div class="footer-container">
     <div class="footer-brand-col">
       <a href="/" class="footer-brand-link">
@@ -313,6 +373,10 @@
   <hr class="footer-divider"/>
   <div class="footer-copyright">© 1971 - 2025 K. McClelland - 360Spaces. All rights reserved.</div>
 </footer>
+                                            </p>
+                                        </p>
+                                    </p>
+                                </p>
     </main>
   </body>
 </html>

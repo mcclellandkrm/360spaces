@@ -44,10 +44,18 @@
         <li class="navbar__dropdown">
           <a href="#" class="navbar__link navbar__dropdown-toggle">Main Focus +</a>
           <ul class="navbar__dropdown-menu">
-            <li><a href="/main-focus/marketing-business-development/" class="navbar__dropdown-link">Marketing & Business Development</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Operational Efficiency & Planning</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Customer Experience & Accessibility</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Sector-Specific Applications</a></li>
+            <li>
+              <a href="/main-focus/marketing-business-development/" class="navbar__dropdown-link">Marketing & Business Development</a>
+            </li>
+            <li>
+              <a href="/main-focus/operational-efficiency-planning/" class="navbar__dropdown-link">Operational Efficiency & Planning</a>
+            </li>
+            <li>
+              <a href="/main-focus/customer-experience-accessibility/" class="navbar__dropdown-link">Customer Experience & Accessibility</a>
+            </li>
+            <li>
+              <a href="#" class="navbar__dropdown-link">Sector-Specific Applications</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -69,234 +77,264 @@
   </div>
 </nav>
 <script>
-  // Hamburger menu toggle
-  const navToggle = document.querySelector('.navbar__toggle');
-  const navMenu = document.getElementById('navbar-menu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function () {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', ! expanded);
-      navMenu.classList.toggle('navbar__menu--open');
-    });
-  }
-
-  // Dropdown menu functionality
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () { // Hamburger menu toggle
+    const navToggle = document.querySelector('.navbar__toggle');
+    const navMenu = document.getElementById('navbar-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', function () {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', ! expanded);
+        navMenu.classList.toggle('navbar__menu--open');
+      });
+    }
+    // Dropdown menu functionality
     const dropdown = document.querySelector('.navbar__dropdown');
     const dropdownToggle = document.querySelector('.navbar__dropdown-toggle');
     const dropdownMenu = document.querySelector('.navbar__dropdown-menu');
-
-    if (dropdown && dropdownToggle && dropdownMenu) {
-      // Handle dropdown click on mobile
-      dropdownToggle.addEventListener('click', function(e) {
+    if (dropdown && dropdownToggle && dropdownMenu) { // Handle dropdown click for both mobile and desktop
+      dropdownToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        // For mobile (768px and below)
         if (window.innerWidth <= 768) {
-          e.preventDefault();
-          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+          const isVisible = dropdownMenu.style.display === 'block';
+          dropdownMenu.style.display = isVisible
+            ? 'none'
+            : 'block';
+        } else { // For desktop, toggle visibility
+          const isVisible = dropdownMenu.style.opacity === '1' || window.getComputedStyle(dropdownMenu).opacity === '1';
+          if (isVisible) {
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.transform = 'translateY(-10px)';
+          } else {
+            dropdownMenu.style.opacity = '1';
+            dropdownMenu.style.visibility = 'visible';
+            dropdownMenu.style.transform = 'translateY(0)';
+          }
         }
       });
-
       // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!dropdown.contains(e.target)) {
+      document.addEventListener('click', function (e) {
+          if (! dropdown.contains(e.target)) {
+            if (
+              window.innerWidth<= 768) {
           dropdownMenu.style.display = 'none';
+        } else {
+          dropdownMenu.style.opacity = '0';
+          dropdownMenu.style.visibility = 'hidden';
+          dropdownMenu.style.transform = 'translateY(-10px)';
         }
-      });
-    }
-  });
-</script>
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth> 768
+            ) {
+              dropdownMenu.style.display = '';
+            } else {
+              dropdownMenu.style.opacity = '';
+              dropdownMenu.style.visibility = '';
+              dropdownMenu.style.transform = '';
+            }
+          }
+        );
+      }
+    });
+    </script>
     <main>
       
 <section class="luxury-case-studies-index">
-  <div
-    class="luxury-case-studies-container">
-    <!-- Hero Section -->
-    <div class="luxury-case-studies-hero">
-      <h1 class="luxury-case-studies-title">Current Projects</h1>
-      <p class="luxury-case-studies-subtitle">
-        From fitness facilities to hospitality venues and retail environments, our current projects showcase the versatility and
-        impact of 360° virtual tour technology across diverse sectors.
-      </p>
-    </div>
-    <!-- Projects Content integrated within same container -->
-    <div class="projects-tabs-header">
-      <div class="projects-tabs-nav">
-        <button class="projects-tab active" data-project="gym">
-          <span class="tab-icon">🏋️</span>
-          <span class="tab-label">Fitness Complex</span>
-        </button>
-        <button class="projects-tab" data-project="hotel">
-          <span class="tab-icon">🏨</span>
-          <span class="tab-label">Luxury Hotel</span>
-        </button>
-        <button class="projects-tab" data-project="tesco">
-          <span class="tab-icon">🛒</span>
-          <span class="tab-label">Retail Park Store</span>
-        </button>
-      </div>
-    </div>
     <div
-      class="projects-panels">
-      <!-- Gym Project Panel -->
-      <div class="projects-panel active" id="gym-panel">
-        <div class="project-content">
-          <div class="project-info">
-            <span class="project-category">Fitness & Wellness</span>
-            <h3 class="project-title">Large-Scale Fitness Complex</h3>
-            <p class="project-description">
-              Comprehensive virtual tour implementation for a major fitness facility, featuring multiple workout areas and specialised
-              training facilities and zones. This project will demonstrate how 360° technology can enhance member onboarding, facility
-              management and space planning.
+        class="luxury-case-studies-container">
+        <!-- Hero Section -->
+        <div class="luxury-case-studies-hero">
+            <h1 class="luxury-case-studies-title">Current Projects</h1>
+            <p class="luxury-case-studies-subtitle">
+                From fitness facilities to hospitality venues and retail environments, our current projects showcase the versatility and
+                impact of 360° virtual tour technology across diverse sectors.
             </p>
-            <div class="project-features">
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Virtual Navigation</h4>
-                  <p>Interactive wayfinding for new members</p>
-                </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Staff Training</h4>
-                  <p>Immersive orientation for equipment and safety protocols</p>
-                </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Space Optimisation</h4>
-                  <p>Optimising for equipment placement and client traffic flow</p>
-                </div>
-              </div>
-            </div>
-            <div class="project-status">
-              <span class="status-badge in-progress">In Development</span>
-              <span class="project-timeline">Expected completion: Q1 2026</span>
-            </div>
-          </div>
-          <div class="project-visual">
-            <div class="project-image-placeholder">
-              <div class="placeholder-content">
-                <div class="placeholder-icon">🏋️‍♂️</div>
-                <p>Fitness Complex Virtual Tour</p>
-                <small>Interactive 360° experience in development</small>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Hotel Project Panel -->
-      <div class="projects-panel" id="hotel-panel">
-        <div class="project-content">
-          <div class="project-info">
-            <span class="project-category">Hospitality</span>
-            <h3 class="project-title">Luxury Hotel Experience</h3>
-            <p class="project-description">
-              Elevated virtual tour solution for a premium hotel property, showcasing guest rooms, dining areas, conference
-              facilities, and amenities. Enhancing guest experience from booking to checkout through immersive virtual previews.
-            </p>
-            <div class="project-features">
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Room Previews</h4>
-                  <p>Virtual room tours for enhanced booking confidence</p>
-                </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Venue Showcases</h4>
-                  <p>Event spaces and dining areas for planners</p>
-                </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Guest Services</h4>
-                  <p>Virtual concierge and amenity discovery</p>
-                </div>
-              </div>
+        <!-- Projects Content integrated within same container -->
+        <div class="projects-tabs-header">
+            <div class="projects-tabs-nav">
+                <button class="projects-tab active" data-project="gym">
+                    <span class="tab-icon">🏋️</span>
+                    <span class="tab-label">Fitness Complex</span>
+                </button>
+                <button class="projects-tab" data-project="hotel">
+                    <span class="tab-icon">🏨</span>
+                    <span class="tab-label">Luxury Hotel</span>
+                </button>
+                <button class="projects-tab" data-project="tesco">
+                    <span class="tab-icon">🛒</span>
+                    <span class="tab-label">Retail Park Store</span>
+                </button>
             </div>
-            <div class="project-status">
-              <span class="status-badge planning">Planning Phase</span>
-              <span class="project-timeline">Capture scheduled: Q1 2026</span>
-            </div>
-          </div>
-          <div class="project-visual">
-            <div class="project-image-placeholder">
-              <div class="placeholder-content">
-                <div class="placeholder-icon">🏨</div>
-                <p>Luxury Hotel Virtual Experience</p>
-                <small>Premium hospitality tour in planning</small>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Retail Project Panel -->
-      <div class="projects-panel" id="tesco-panel">
-        <div class="project-content">
-          <div class="project-info">
-            <span class="project-category">Retail</span>
-            <h3 class="project-title">Large Retail Innovation</h3>
-            <p class="project-description">
-              Strategic virtual tour implementation for a large retail environment, focusing on customer journey optimisation, staff
-              training, space planning, product placement efficiency. Initial testbed project demonstrating real-world retail sector
-              applications.
-            </p>
-            <div class="project-features">
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Customer Journey</h4>
-                  <p>Shopping flow analysis and optimisation</p>
+        <div
+            class="projects-panels">
+            <!-- Gym Project Panel -->
+            <div class="projects-panel active" id="gym-panel">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-category">Fitness & Wellness</span>
+                        <h3 class="project-title">Large-Scale Fitness Complex</h3>
+                        <p class="project-description">
+                            Comprehensive virtual tour implementation for a major fitness facility, featuring multiple workout areas and specialised
+                            training facilities and zones. This project will demonstrate how 360° technology can enhance member onboarding, facility
+                            management and space planning.
+                        </p>
+                        <div class="project-features">
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Virtual Navigation</h4>
+                                    <p>Interactive wayfinding for new members</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Staff Training</h4>
+                                    <p>Immersive orientation for equipment and safety protocols</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Space Optimisation</h4>
+                                    <p>Optimising for equipment placement and client traffic flow</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge in-progress">In Development</span>
+                            <span class="project-timeline">Expected completion: Q1 2026</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-image-placeholder">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon">🏋️‍♂️</div>
+                                <p>Fitness Complex Virtual Tour</p>
+                                <small>Interactive 360° experience in development</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Space Planning</h4>
-                  <p>Store, stock and car park layout</p>
+            </div>
+            <!-- Hotel Project Panel -->
+            <div class="projects-panel" id="hotel-panel">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-category">Hospitality</span>
+                        <h3 class="project-title">Luxury Hotel Experience</h3>
+                        <p class="project-description">
+                            Elevated virtual tour solution for a premium hotel property, showcasing guest rooms, dining areas, conference
+                            facilities, and amenities. Enhancing guest experience from booking to checkout through immersive virtual previews.
+                        </p>
+                        <div class="project-features">
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Room Previews</h4>
+                                    <p>Virtual room tours for enhanced booking confidence</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Venue Showcases</h4>
+                                    <p>Event spaces and dining areas for planners</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Guest Services</h4>
+                                    <p>Virtual concierge and amenity discovery</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge planning">Planning Phase</span>
+                            <span class="project-timeline">Capture scheduled: Q1 2026</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-image-placeholder">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon">🏨</div>
+                                <p>Luxury Hotel Virtual Experience</p>
+                                <small>Premium hospitality tour in planning</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="project-feature-item">
-                <div class="project-feature-text">
-                  <h4>Staff Onboarding</h4>
-                  <p>Comprehensive store familiarization training</p>
+            </div>
+            <!-- Retail Project Panel -->
+            <div class="projects-panel" id="tesco-panel">
+                <div class="project-content">
+                    <div class="project-info">
+                        <span class="project-category">Retail</span>
+                        <h3 class="project-title">Large Retail Innovation</h3>
+                        <p class="project-description">
+                            Strategic virtual tour implementation for a large retail environment, focusing on customer journey optimisation, staff
+                            training, space planning, product placement efficiency. Initial testbed project demonstrating real-world retail sector
+                            applications.
+                        </p>
+                        <div class="project-features">
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Customer Journey</h4>
+                                    <p>Shopping flow analysis and optimisation</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Space Planning</h4>
+                                    <p>Store, stock and car park layout</p>
+                                </div>
+                            </div>
+                            <div class="project-feature-item">
+                                <div class="project-feature-text">
+                                    <h4>Staff Onboarding</h4>
+                                    <p>Comprehensive store familiarization training</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-status">
+                            <span class="status-badge discovery">Discovery Phase</span>
+                            <span class="project-timeline">Requirements gathering: Q4 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-image-placeholder">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon">🛒</div>
+                                <p>Retail Store Experience</p>
+                                <small>Retail innovation project in discovery</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="project-status">
-              <span class="status-badge discovery">Discovery Phase</span>
-              <span class="project-timeline">Requirements gathering: Q4 2025</span>
-            </div>
-          </div>
-          <div class="project-visual">
-            <div class="project-image-placeholder">
-              <div class="placeholder-content">
-                <div class="placeholder-icon">🛒</div>
-                <p>Retail Store Experience</p>
-                <small>Retail innovation project in discovery</small>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <section class="projects-cta">
-  <div class="luxury-contact-container">
-    <div class="projects-cta-content">
-      <h2>Ready to Transform Your Space?</h2>
-      <p>Join our growing portfolio of innovative projects across diverse industries.</p>
-      <a href="/use-cases/" class="luxury-cta-button">
-        Explore Use Cases
-        <svg class="button-arrow" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7 17L17 7M17 7H7M17 7V17"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <div class="luxury-contact-container">
+        <div class="projects-cta-content">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Join our growing portfolio of innovative projects across diverse industries.</p>
+            <a href="/use-cases/" class="luxury-cta-button">
+                Explore Use Cases
+                <svg class="button-arrow" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7 17L17 7M17 7H7M17 7V17"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
     </div>
-  </div>
 </section>
 <footer class="footer-section">
   <div class="footer-container">
@@ -350,34 +388,34 @@
   <div class="footer-copyright">© 1971 - 2025 K. McClelland - 360Spaces. All rights reserved.</div>
 </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.projects-tab');
-    const panels = document.querySelectorAll('.projects-panel');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', function () {
-        const projectId = this.getAttribute('data-project');
-        // Remove active class from all tabs and panels
-        tabs.forEach(t => t.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        // Add active class to clicked tab and corresponding panel
-        this.classList.add('active');
-        document
-          .getElementById(projectId + '-panel')
-          .classList
-          .add('active');
-      });
-    });
-    // Add smooth scroll behavior for tab navigation
-    const tabsContainer = document.querySelector('.projects-tabs-nav');
-    if (tabsContainer) {
-      tabsContainer.addEventListener('wheel', function (e) {
-        if (e.deltaY !== 0) {
-          e.preventDefault();
-          this.scrollLeft += e.deltaY;
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.projects-tab');
+        const panels = document.querySelectorAll('.projects-panel');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const projectId = this.getAttribute('data-project');
+                // Remove active class from all tabs and panels
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+                // Add active class to clicked tab and corresponding panel
+                this.classList.add('active');
+                document
+                    .getElementById(projectId + '-panel')
+                    .classList
+                    .add('active');
+            });
+        });
+        // Add smooth scroll behavior for tab navigation
+        const tabsContainer = document.querySelector('.projects-tabs-nav');
+        if (tabsContainer) {
+            tabsContainer.addEventListener('wheel', function (e) {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    this.scrollLeft += e.deltaY;
+                }
+            });
         }
-      });
-    }
-  });
+    });
 </script>
     </main>
   </body>
