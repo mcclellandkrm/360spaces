@@ -1,3 +1,19 @@
+/* =============================================
+   DESIGN SYSTEM VARIABLES
+============================================= */
+:root {
+  /* Border Radius Design System */
+  --radius-button: 12px;        /* All buttons */
+  --radius-card: 20px;          /* Cards and small containers */
+  --radius-panel: 24px;         /* Main panels and large containers */
+  --radius-large: 35px;         /* Large panels and hero sections */
+  --radius-button-pill: 50px;   /* Pill-shaped buttons */
+  --radius-input: 12px;         /* Form inputs */
+  --radius-small: 4px;          /* Small elements like checkboxes */
+  --radius-tiny: 2px;           /* Micro elements like checkmarks */
+  --radius-round: 50%;          /* Circular elements */
+}
+
 @media (max-width: 900px) {
   .vertical-panels-wrapper {
     max-width: 98vw;
@@ -42,7 +58,7 @@
 .luxury-contact-content {
   background: rgba(24, 31, 46, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border-radius: var(--radius-panel);
   padding: 4rem;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -163,7 +179,7 @@
   width: 100%;
   background: rgba(15, 20, 25, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: var(--radius-input);
   padding: 1.5rem 1.25rem 0.75rem;
   font-size: 1.1rem;
   color: #fff;
@@ -296,7 +312,7 @@
   width: 20px;
   height: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  border-radius: var(--radius-small);
   margin-right: 0.75rem;
   position: relative;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -343,7 +359,7 @@
   width: 100%;
   background: linear-gradient(135deg, #6c5ce7 0%, #4f46e5 100%);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-button);
   padding: 1.5rem 2rem;
   font-size: 1.2rem;
   font-weight: 700;
@@ -421,7 +437,7 @@
   
   .luxury-contact-content {
     padding: 2.5rem 1.5rem;
-    border-radius: 16px;
+    border-radius: var(--radius-card);
   }
   
   .luxury-contact-heading {
@@ -556,7 +572,7 @@
   align-items: center;
   justify-content: center;
   background: #fff;
-  border-radius: 1.1rem;
+  border-radius: var(--radius-card);
   box-shadow: 0 2px 16px 0 #a78bfa22;
   position: relative;
 }
@@ -631,7 +647,7 @@
   background: rgba(60,40,180,0.18);
   color: #fff;
   border: 1px solid #6d6aff;
-  border-radius: 2rem;
+  border-radius: var(--radius-button);
   padding: 0.7rem 1.7rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -667,7 +683,7 @@
   max-width: 1200px;
   margin: 0 auto;
   background: #181f2e;
-  border-radius: 1.5rem;
+  border-radius: var(--radius-panel);
   box-shadow: 0 4px 32px 0 rgba(80,60,180,0.13);
   padding: 2.5rem 2rem 2rem 2rem;
   display: flex;
@@ -707,7 +723,7 @@
   background: #232b36;
   color: #fff;
   border: none;
-  border-radius: 2em;
+  border-radius: var(--radius-button);
   padding: 0.5em 1.5em;
   font-size: 1rem;
   font-weight: 600;
@@ -740,7 +756,7 @@
 .get-started-form select {
   width: 100%;
   padding: 0.9rem 1rem;
-  border-radius: 0.7rem;
+  border-radius: var(--radius-input);
   border: none;
   background: #232b36;
   color: #fff;
@@ -799,7 +815,7 @@
   width: 1.15em;
   height: 1.15em;
   border: 2px solid #fff;
-  border-radius: 0.3em;
+  border-radius: var(--radius-small);
   background: transparent;
   display: inline-block;
   position: relative;
@@ -825,7 +841,7 @@
   height: 0.6em;
   border: solid #232b36;
   border-width: 0 0.18em 0.18em 0;
-  border-radius: 0.1em;
+  border-radius: var(--radius-tiny);
   transform: rotate(45deg);
   content: "";
 }
@@ -837,7 +853,7 @@
   color: #232b36;
   font-weight: 700;
   border: none;
-  border-radius: 2em;
+  border-radius: var(--radius-button);
   padding: 0.9em 0;
   font-size: 1.1rem;
   margin-top: 0.5rem;
@@ -868,7 +884,7 @@
 .get-started-call-btn {
   background: #232b36;
   color: #fff;
-  border-radius: 2em;
+  border-radius: var(--radius-button);
   padding: 0.7em 1.7em;
   font-size: 1rem;
   font-weight: 600;
@@ -895,7 +911,7 @@
 .navbar__logo {
   background: #232b36; /* temp: matches navbar, remove after test */
   padding: 0.2rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-small);
 }
 .navbar__logo img {
   width: auto;
@@ -964,7 +980,7 @@
 }
 .case-study-block {
   background: #fff;
-  border-radius: 2.2rem;
+  border-radius: var(--radius-card);
   box-shadow: 0 4px 32px 0 rgba(20, 118, 84, 0.1);
   overflow: hidden;
   display: flex;
@@ -977,7 +993,7 @@
 }
 .top-area {
   padding: 0;
-  border-radius: 2.2rem 2.2rem 0 0;
+  border-radius: var(--radius-large) var(--radius-large) 0 0;
   position: relative;
   text-align: left;
   transition: background 0.2s;
@@ -989,14 +1005,14 @@
   align-items: flex-start;
   justify-content: center;
   overflow: hidden;
-  border-radius: 2.2rem 2.2rem 0 0;
+  border-radius: var(--radius-large) var(--radius-large) 0 0;
   margin-bottom: 0;
 }
 .case-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 2.2rem 2.2rem 0 0;
+  border-radius: var(--radius-large) var(--radius-large) 0 0;
   transition: transform 0.3s cubic-bezier(.4,2,.6,1);
   will-change: transform;
 }
@@ -1060,7 +1076,7 @@
 .btm-area {
   background: #f7f8fa;
   padding: 1.5rem 2rem 1.5rem 2rem;
-  border-radius: 0 0 2.2rem 2.2rem;
+  border-radius: 0 0 var(--radius-large) var(--radius-large);
   text-align: left;
 }
 .btm-area .quote-img img {
@@ -1076,7 +1092,7 @@
 .author-pic img {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   object-fit: cover;
 }
 .author-txt {
@@ -1200,7 +1216,7 @@
   width: 48px;
   height: 48px;
   background: #a78bfa;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1258,7 +1274,7 @@
 .footer-social-icon {
   color: #fff;
   background: none;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   padding: 0.3rem;
   display: flex;
   align-items: center;
@@ -1312,7 +1328,7 @@
 .luxury-newsletter-content {
   background: rgba(24, 31, 46, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border-radius: var(--radius-panel);
   padding: 4rem;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -1357,7 +1373,7 @@
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, rgba(108, 92, 231, 0.2) 0%, rgba(79, 70, 229, 0.3) 100%);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1441,7 +1457,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(108, 92, 231, 0.2);
-  border-radius: 8px;
+  border-radius: var(--radius-small);
   flex-shrink: 0;
 }
 
@@ -1474,7 +1490,7 @@
   width: 100%;
   background: rgba(15, 20, 25, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: var(--radius-input);
   padding: 1.5rem 1.25rem 0.75rem;
   font-size: 1.1rem;
   color: #fff;
@@ -1527,7 +1543,7 @@
   width: 100%;
   background: linear-gradient(135deg, #6c5ce7 0%, #4f46e5 100%);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-button);
   padding: 1.5rem 2rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -1604,7 +1620,7 @@
   gap: 2rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: var(--radius-button);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1649,7 +1665,7 @@
   
   .luxury-newsletter-content {
     padding: 2.5rem 1.5rem;
-    border-radius: 16px;
+    border-radius: var(--radius-card);
   }
   
   .luxury-newsletter-title {
@@ -1752,8 +1768,8 @@
 
 /* Luxury Logo Carousel - Porsche-level elegance */
 .luxury-logo-carousel {
-  margin-bottom: 80px;
-  padding: 80px 0;
+  margin-bottom: 40px;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1775,7 +1791,7 @@
 .luxury-logo-track {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 
 .luxury-logo-row {
@@ -1783,21 +1799,21 @@
   white-space: nowrap;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  gap: 40px;
+  gap: 30px;
 }
 
 .luxury-logo-row:nth-child(1) {
-  animation: luxuryScrollLeft 60s linear infinite;
+  animation: luxuryScrollLeft 20s linear infinite;
 }
 
 .luxury-logo-row:nth-child(2) {
-  animation: luxuryScrollRight 45s linear infinite;
-  animation-delay: -15s;
+  animation: luxuryScrollRight 20s linear infinite;
+  animation-delay: -10s;
 }
 
 .luxury-logo-row:nth-child(3) {
-  animation: luxuryScrollLeft 75s linear infinite;
-  animation-delay: -30s;
+  animation: luxuryScrollLeft 20s linear infinite;
+  animation-delay: -10s;
 }
 
 .luxury-logo-row:hover {
@@ -1809,7 +1825,7 @@
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(108, 92, 231, 0.1);
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   padding: 30px 40px;
   display: flex;
   align-items: center;
@@ -1857,7 +1873,7 @@
   height: auto;
   background: rgba(255, 255, 255, 0.98);
   padding: 20px 24px;
-  border-radius: 10px;
+  border-radius: var(--radius-button);
   box-shadow: 
     0 4px 12px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -1906,7 +1922,7 @@
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(108, 92, 231, 0.1);
-  border-radius: 24px;
+  border-radius: var(--radius-panel);
   margin-top: 40px;
 }
 
@@ -2012,7 +2028,7 @@
 }
 
 .luxury-mainpanels-section {
-  padding: 120px 0;
+  padding: 40px 0;
   background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0f1419 100%);
   position: relative;
   overflow: hidden;
@@ -2041,7 +2057,7 @@
 
 .luxury-mainpanels-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .luxury-mainpanels-title {
@@ -2077,7 +2093,7 @@
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(108, 92, 231, 0.15);
-  border-radius: 32px;
+  border-radius: var(--radius-panel);
   padding: 48px;
   position: relative;
   overflow: hidden;
@@ -2171,7 +2187,7 @@
   gap: 12px;
   background: linear-gradient(135deg, rgba(108, 92, 231, 0.15) 0%, rgba(79, 70, 229, 0.1) 100%);
   border: 1px solid rgba(108, 92, 231, 0.3);
-  border-radius: 50px;
+  border-radius: var(--radius-button-pill);
   padding: 16px 28px;
   color: #ffffff;
   text-decoration: none;
@@ -2227,7 +2243,7 @@
 .luxury-mainpanel-visual img {
   max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   z-index: 2;
@@ -2240,7 +2256,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(108, 92, 231, 0.1) 0%, transparent 60%);
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   opacity: 0;
   transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 3;
@@ -2264,7 +2280,7 @@
   right: 0;
   bottom: 0;
   pointer-events: none;
-  border-radius: 32px;
+  border-radius: var(--radius-panel);
   background: radial-gradient(
     600px circle at var(--x, 50%) var(--y, 50%), 
     rgba(108, 92, 231, 0.15) 0%, 
@@ -2386,7 +2402,7 @@
   width: 100%;
   min-height: 380px;
   padding: 2.5rem 3rem;
-  border-radius: 2rem;
+  border-radius: var(--radius-large);
   background: linear-gradient(135deg, #181f2e 60%, #3a2e5f 100%);
   box-shadow: 0 4px 32px 0 rgba(80,60,180,0.13);
   border: 1.5px solid rgba(120,100,255,0.15);
@@ -2412,7 +2428,7 @@
   min-width: 0;
   min-height: 320px;
   padding: 2rem 2.5rem;
-  border-radius: 1.5rem;
+  border-radius: var(--radius-panel);
   background: linear-gradient(135deg, #181f2e 60%, #3a2e5f 100%);
   box-shadow: 0 2px 24px 0 rgba(80,60,180,0.10);
   border: 1.5px solid rgba(120,100,255,0.13);
@@ -2448,7 +2464,7 @@
   pointer-events: none;
   position: absolute;
   left: 0; top: 0; width: 100%; height: 100%;
-  border-radius: 1.5rem;
+  border-radius: var(--radius-panel);
   z-index: 1;
   background: radial-gradient(300px 180px at var(--x,50%) var(--y,50%), rgba(120,100,255,0.13) 0%, rgba(120,100,255,0.06) 60%, transparent 100%);
   transition: background 0.2s;
@@ -2457,7 +2473,7 @@
   pointer-events: none;
   position: absolute;
   left: 0; top: 0; width: 100%; height: 100%;
-  border-radius: 2rem;
+  border-radius: var(--radius-large);
   z-index: 1;
   background: radial-gradient(400px 250px at var(--x,50%) var(--y,50%), rgba(120,100,255,0.18) 0%, rgba(120,100,255,0.08) 60%, transparent 100%);
   transition: background 0.2s;
@@ -2483,7 +2499,7 @@
   background: rgba(60,40,180,0.18);
   color: #fff;
   border: 1px solid #6d6aff;
-  border-radius: 2rem;
+  border-radius: var(--radius-large);
   padding: 0.7rem 1.7rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -3132,7 +3148,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(108, 92, 231, 0.15);
-  border-radius: 24px;
+  border-radius: var(--radius-panel);
   padding: 48px;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
@@ -3184,7 +3200,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .luxury-card-icon {
   width: 80px;
   height: 80px;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: linear-gradient(135deg, rgba(108, 92, 231, 0.15) 0%, rgba(79, 70, 229, 0.1) 100%);
   border: 1px solid rgba(108, 92, 231, 0.25);
   display: flex;
@@ -3862,7 +3878,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .portfolio-item.no-overlay .portfolio-caption {
   background: rgba(0, 0, 0, 0.8);
   padding: 1.2rem 1.8rem;
-  border-radius: 12px;
+  border-radius: var(--radius-button);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
