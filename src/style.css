@@ -1,8 +1,198 @@
+/* Loom-style Project Panel Responsive Layout */
+.project-panel-loom {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.08);
+  border: 1px solid rgba(88,196,197,0.1);
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
+}
+.project-panel-loom__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-panel-loom__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  background: #f8f9fa;
+}
+@media (max-width: 900px) {
+  .project-panel-loom {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  /* No extra image rules needed here */
+}
+.project-panel-loom__info {
+  flex: 1 1 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-category {
+  color: #58c4c5;
+  background: #f3fbfb;
+  border-radius: 1.2em;
+  padding: 0.25em 1.2em;
+  font-weight: 600;
+  font-size: 1.05em;
+  display: inline-block;
+  max-width: 320px;
+  margin-bottom: 1.2em;
+  letter-spacing: 0.04em;
+  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
+}
+
+.project-description {
+  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
+  font-size: clamp(0.9rem, 1.8vw, 1.125rem);
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.project-features-list {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
+  line-height: 1.7;
+}
+.project-features-list li {
+  margin-bottom: 0.7em;
+  font-size: 1.05em;
+}
+.project-features-list strong {
+  color: #222;
+  font-weight: 600;
+}
+.project-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
+}
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.status-badge.in-progress { background: #ffeaa7; color: #d63031; }
+.status-badge.planning { background: #a8e6cf; color: #00b894; }
+.status-badge.discovery { background: #dda0dd; color: #6c5ce7; }
+.project-timeline {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .project-panel-loom {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  /* Removed duplicate .project-panel-loom__image and img rules for clarity. Top-level rules now apply. */
+  .project-panel-loom__info {
+    padding: 1.5rem;
+  }
+}
+/* Responsive image container for project panels */
+.project-image-alt {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  overflow: hidden;
+}
+
+.project-image-alt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .project-image-alt {
+    height: 220px;
+    border-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    margin-bottom: 1.5rem;
+  }
+}
+@font-face {
+  font-family: 'WF Visual Sans';
+  src: url('/fonts/WFVisualSans-RegularText.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'WF Visual Sans';
+  src: url('/fonts/WFVisualSans-SemiBoldText.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'WF Visual Sans';
+  src: url('/fonts/WFVisualSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'WF Visual Sans';
+  src: url('/fonts/WFVisualSans-SemiBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'WF Visual Sans';
+  src: url('/fonts/WFVisualSans-SemiBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* Add more weights/styles as needed */
+
+
+
 /* =============================================
    DESIGN SYSTEM VARIABLES
 ============================================= */
 :root {
   /* Border Radius Design System */
+  --font-body: 'WF Visual Sans', Arial, sans-serif;
+  --font-heading: 'WF Visual Sans', Arial, sans-serif;
   --radius-button: 12px;        /* All buttons */
   --radius-card: 20px;          /* Cards and small containers */
   --radius-panel: 24px;         /* Main panels and large containers */
@@ -31,7 +221,7 @@
 .luxury-contact-section {
   background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0f1419 100%);
   padding: 6rem 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   position: relative;
   overflow: hidden;
 }
@@ -98,7 +288,7 @@
 }
 
 .luxury-contact-heading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 1rem;
@@ -110,7 +300,7 @@
 }
 
 .luxury-contact-description {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   font-weight: 300;
@@ -183,7 +373,7 @@
   padding: 1.5rem 1.25rem 0.75rem;
   font-size: 1.1rem;
   color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   box-sizing: border-box;
   position: relative;
@@ -369,7 +559,7 @@
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 8px 30px rgba(108, 92, 231, 0.3);
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
 }
 
 .luxury-submit-btn::before {
@@ -445,7 +635,7 @@
   }
   
   .luxury-contact-description {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
   }
   
   .luxury-checkbox-options {
@@ -472,7 +662,7 @@
   }
   
   .luxury-contact-description {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   
   .luxury-contact-content {
@@ -639,7 +829,7 @@
   }
 }
 .site-btn {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
 }
 /* Unified Button Style */
 .site-btn {
@@ -677,7 +867,7 @@
   background: #101426;
   color: #fff;
   padding: 4rem 0 4rem 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
 }
 .get-started-container {
   max-width: 1200px;
@@ -709,7 +899,7 @@
 }
 .get-started-title {
   font-size: 2.5rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -1223,7 +1413,7 @@
   color: #232b36;
 }
 .footer-brand-name {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
@@ -1233,7 +1423,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem 2rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
 }
 @media (min-width: 900px) {
@@ -1295,7 +1485,7 @@
   color: #b0b3c6;
   font-size: 1rem;
   padding: 1.5rem 0 1rem 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
 }
 /* Luxury Newsletter Section */
 .luxury-newsletter-section {
@@ -1326,6 +1516,7 @@
 }
 
 .luxury-newsletter-content {
+  font-family: var(--font-body);
   background: rgba(24, 31, 46, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-panel);
@@ -1354,6 +1545,7 @@
 }
 
 .luxury-newsletter-header {
+  font-family: var(--font-body);
   opacity: 0;
   animation: luxuryNewsletterHeaderSlide 1.0s cubic-bezier(0.23, 1, 0.32, 1) 0.6s both;
 }
@@ -1399,7 +1591,8 @@
 }
 
 .luxury-newsletter-title {
-  font-size: 3rem;
+  font-family: var(--font-body);
+  font-size: 2.5rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -1411,7 +1604,8 @@
 }
 
 .luxury-newsletter-description {
-  font-size: 1.2rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -1424,6 +1618,7 @@
 }
 
 .luxury-benefit-item {
+  font-family: var(--font-body);
   display: flex;
   align-items: center;
   color: rgba(255, 255, 255, 0.9);
@@ -1673,7 +1868,7 @@
   }
   
   .luxury-newsletter-description {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
   }
   
   .luxury-trust-stats {
@@ -1746,8 +1941,8 @@
 
 .luxury-client-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 500;
   line-height: 1.2;
   color: #ffffff;
   margin-bottom: 20px;
@@ -1759,7 +1954,7 @@
 
 .luxury-client-subtitle {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
   margin: 0 auto;
@@ -1933,7 +2128,7 @@
 .luxury-stat-number {
   font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 500;
   color: #2c67cb;
   margin-bottom: 8px;
   /* Commented out gradient to see the green color */
@@ -2062,8 +2257,8 @@
 
 .luxury-mainpanels-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 2.5rem);
+  font-weight: 500;
   line-height: 1.1;
   color: #ffffff;
   margin-bottom: 24px;
@@ -2075,7 +2270,7 @@
 
 .luxury-mainpanels-subtitle {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.7);
   max-width: 700px;
   margin: 0 auto;
@@ -2719,41 +2914,7 @@
   z-index: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Hind:wght@300;400;500;600;700&display=swap');
 
-/* Typography System */
-:root {
-  --font-heading: 'Montserrat', Arial, sans-serif;
-  --font-body: 'Hind', Arial, sans-serif;
-}
-
-/* Global Typography Rules */
-h1, h2, h3, h4, h5, h6,
-.section-title,
-.hero-title,
-.luxury-showcase-title,
-.luxury-contact-heading,
-.luxury-card-title {
-  font-family: var(--font-heading);
-}
-
-p, body, 
-.luxury-contact-description,
-.luxury-card-description,
-.luxury-scenario-item p,
-input, textarea, select,
-button {
-  font-family: var(--font-body);
-}
-
-
-body {
-  font-family: var(--font-body);
-  margin: 0;
-  color: #333;
-  background: #faf9f6;
-  line-height: 1.6;
-}
 
 .hero-section {
   display: flex;
@@ -2792,14 +2953,14 @@ body {
 .hero-section h4,
 .hero-section h5,
 .hero-section h6 {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 500;
   line-height: 1.1;
   color: #fff;
 }
 
 .hero-section h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
   margin-bottom: 2.5rem;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -2830,14 +2991,17 @@ body {
 /* Light/Fine heading styles */
 .heading-light,
 h1.heading-light, h2.heading-light, h3.heading-light, h4.heading-light, h5.heading-light, h6.heading-light {
-  font-weight: 300;
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 .heading-regular,
 h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, h5.heading-regular, h6.heading-regular {
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: 500;
 }
 .hero-section p {
-  font-size: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1.125rem;
   color: #fff;
   margin: 0.5rem 0;
 }
@@ -2934,7 +3098,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .navbar {
   background: #232b36;
   color: #e5eaf3;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   border-bottom: 1px solid #b0b3c633;
   padding: 0;
 }
@@ -3197,8 +3361,8 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-showcase-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 2.5rem);
+  font-weight: 500;
   line-height: 1.1;
   color: #ffffff;
   margin-bottom: 24px;
@@ -3211,7 +3375,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-showcase-subtitle {
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.7);
   max-width: 600px;
   margin: 0 auto;
@@ -3338,7 +3502,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-card-description {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
   margin: 0;
@@ -3570,7 +3734,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 /* Section Title - shared across all major sections */
 .section-title {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 1.1;
@@ -3581,7 +3745,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 /* Section Subtitle - shared style */
 .section-subtitle {
-  font-size: 1.13rem;
+  font-size: 1.125rem;
   color: #a1a1aa;
   margin-bottom: 0;
   text-align: center;
@@ -3751,7 +3915,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .portfolio-section {
   background: #f8f9fa;
   padding: 5rem 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
 }
 
 .portfolio-section .container {
@@ -3766,7 +3930,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .portfolio-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
@@ -4104,7 +4268,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .testimonials-section {
   background: #f8f9fa;
   padding: 5rem 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   overflow: hidden;
 }
 
@@ -4127,7 +4291,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .testimonials-header .section-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
   margin: 0 0 1rem 0;
@@ -4795,7 +4959,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   top: -8px;
   font-size: 3rem;
   color: #6c5ce7;
-  font-family: serif;
+  font-family: var(--font-heading);
 }
 
 .luxury-author-name {
@@ -5126,8 +5290,8 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-studies-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 4vw, 3.5rem);
-  font-weight: 300;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
   line-height: 1.1;
   color: #ffffff;
   margin-bottom: 24px;
@@ -5139,7 +5303,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-studies-subtitle {
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
   max-width: 800px;
@@ -5238,8 +5402,8 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-study-card-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.7rem;
+  font-weight: 500;
   color: #ffffff;
   margin-bottom: 12px;
   line-height: 1.2;
@@ -5247,7 +5411,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-study-card-service {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #6c5ce7;
   font-weight: 600;
   margin-bottom: 16px;
@@ -5257,7 +5421,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .luxury-case-study-card-description {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 24px;
@@ -5316,7 +5480,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 .luxury-case-studies-cta h2 {
   font-family: var(--font-heading);
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
   margin-bottom: 16px;
   line-height: 1.2;
@@ -5691,7 +5855,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .projects-section-title {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 3rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -5719,7 +5883,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   color: #6c757d;
   white-space: nowrap;
@@ -5779,16 +5943,17 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .project-content {
+  font-family: var(--font-body);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.0rem;
   align-items: center;
   background: white;
   border-radius: 24px;
-  padding: 3rem;
+  overflow: hidden;
+  padding: 3rem 3rem;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(88, 196, 197, 0.1);
-  overflow: hidden;
   width: 100%;
   max-width: 100%;
 }
@@ -5800,7 +5965,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .project-category {
   display: inline-block;
-  background: linear-gradient(135deg, #58c4c5 0%, #4a9fa0 100%);
+  background: linear-gradient(135deg, #A78BFA 0%, #2F2F65 100%);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -5812,9 +5977,9 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .project-title {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: clamp(1.25rem, 3.5vw, 2rem);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -5825,7 +5990,8 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .project-description {
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.8vw, 1.125rem);
   color: #4a5568;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -5842,7 +6008,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .project-feature-text h4 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 0.5rem;
@@ -5867,7 +6033,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .status-badge {
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -5891,7 +6057,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .project-timeline {
   color: #6c757d;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
@@ -5903,13 +6069,17 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .project-image-placeholder {
   width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 16px;
+  max-width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 24px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #dee2e6;
+  border: none;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .placeholder-content {
@@ -5941,7 +6111,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .projects-cta-content h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 2.5rem;
   font-weight: 700;
   color: white;
@@ -5990,13 +6160,15 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   }
   
   .project-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.25rem;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 24px;
+  overflow: hidden;
   }
   
   .project-info {
@@ -6231,6 +6403,8 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 1.25rem;
