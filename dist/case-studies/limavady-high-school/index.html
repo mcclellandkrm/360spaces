@@ -166,9 +166,9 @@
           </div>
         </div>
       </div>
-      <h1 class="luxury-case-study-title">Transforming Education: Virtual Tours at
+      <h1 class="luxury-case-study-title">Transforming Education: Virtual Tour of
       Limavady High School</h1>
-      <p class="luxury-case-study-subtitle">How 360° virtual tours transformed student engagement and accessibility at Limavady High School</p>
+      <p class="luxury-case-study-subtitle">How a custom 360° virtual tour is helping student and parent engagement and accessibility at Limavady High School</p>
     </div>
     <!-- Main Image Section -->
     <div class="luxury-case-study-image">
@@ -179,28 +179,35 @@
     <div class="luxury-case-study-content">
       <div class="luxury-content-section">
         <h2>Project Overview</h2>
-        <p>Limavady High School partnered with 360spaces to create an immersive virtual tour experience that showcases their
+        <p>Limavady High School partnered with 360Spaces to create an immersive virtual tour experience that showcases their
           state-of-the-art facilities, vibrant learning environments, and unique educational atmosphere. This comprehensive
           digital solution allows prospective students and families to explore the school from anywhere, at any time.</p>
+        <p>During our first meeting it was crystal clear that Limavady High School is an Education Centre, not just a school.
+          They have received several awards, including being a Gold Winner of the ‘Making a Difference in a Secondary School’
+          award byte he Teaching Awards Trust, being recognised by the CCEA for outstanding student achievement in Health and
+          Social Care and working towards the nationally recognised Wellbeing Award for Schools. They have also previously won UK
+          Secondary School of the Year.</p>
         <p>The virtual tour captures every aspect of school life - from modern classrooms and science laboratories to sports
-          facilities and common areas - providing an authentic feel for what makes
-          Limavady High School a premier educational destination.</p>
+          facilities and common areas - providing an authentic feel for what makes Limavady High School a premier educational
+          destination.</p>
       </div>
       <div class="luxury-content-section">
         <h2>The Challenge</h2>
-        <p>Like many educational institutions, Limavady High School faced the challenge of effectively showcasing their facilities to
-          prospective students and families who couldn't always visit in person. Traditional photography and brochures couldn't
-          capture the full scale and atmosphere of their impressive campus.</p>
-        <p>The school needed a solution that would increase accessibility, reduce the burden on staff for individual tours, and
-          provide a compelling digital experience that truly represented their educational excellence.</p>
+        <p>Like many educational institutions, Limavady High School faced the challenge of effectively showcasing their
+          facilities to prospective students and families who couldn't always visit in person. Traditional photography and
+          brochures simply cannot capture the full scale and atmosphere of their impressive campus.</p>
+        <p>The school required a solution that would increase accessibility while also reducing the burden on staff for
+          individual tours, and provide a compelling digital experience that truly represented their educational excellence.</p>
+        <p>We came with recommendation via a previous virtual tour we created for Antrim Grammar School so the solution needed
+          to be a good one and it is an ongoing on.</p>
       </div>
       <div class="luxury-content-section">
         <h2>Our Solution</h2>
         <p>We developed a comprehensive virtual tour that brings Limavady High School's campus to life through cutting-edge 360°
           technology. The solution includes:</p>
         <ul class="luxury-feature-list">
-          <li>Interactive navigation through all key areas of the school</li>
-          <li>Integrated multimedia content including videos and information points</li>
+          <li>Interactive navigation through key areas of the school</li>
+          <li>Integrated multimedia content including information points</li>
           <li>Mobile-responsive design for access on any device</li>
           <li>Accessibility features ensuring inclusive access for all users</li>
           <li>Seamless integration with the school's existing website</li>
@@ -246,7 +253,7 @@
       <!-- Testimonial Section -->
       <div class="luxury-testimonial-section">
         <div class="luxury-testimonial-content">
-          <blockquote class="luxury-testimonial-quote">The virtual tour has transformed how we engage with prospective families. It&#39;s increased our reach significantly and allows parents and students to get a genuine feel for our school environment before they visit.</blockquote>
+          <blockquote class="luxury-testimonial-quote">“The virtual tour has transformed how we engage with prospective families. It&#39;s increased our reach significantly and allows parents and students to get a genuine feel for our school environment before they visit.”</blockquote>
           <div class="luxury-testimonial-author">
             <div class="luxury-author-info">
               <span class="luxury-author-name">Sarah Mitchell</span>
@@ -333,5 +340,89 @@
   </div>
 </section>
     </main>
+    
+    <div id="main-dot-mousetrail" class="trail-dot-mousetrail main-dot-mousetrail"></div>
+    <script>
+      (function () { // Hide on touch devices
+        if ('ontouchstart' in window) 
+          return;
+        
+        const NUM_TRAIL = 12; // Fewer dots for subtlety
+        const trail = [];
+        for (let i = 0; i < NUM_TRAIL; i++) {
+          const el = document.createElement('div');
+          el.className = 'trail-dot-mousetrail';
+          document.body.appendChild(el);
+          trail.push({
+            el,
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2
+          });
+        }
+        const mainDot = document.getElementById('main-dot-mousetrail');
+        let mouseX = window.innerWidth / 2,
+          mouseY = window.innerHeight / 2;
+        document.addEventListener('mousemove', e => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+        function animate() {
+          mainDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+          let prevX = mouseX,
+            prevY = mouseY;
+          for (let i = 0; i < trail.length; i++) {
+            const t = trail[i];
+            t.x += (prevX - t.x) * 0.25;
+            t.y += (prevY - t.y) * 0.25;
+            t
+              .el
+              .style
+              .transform = `translate(${
+              t.x
+            }px, ${
+              t.y
+            }px)`;
+            // Brand-aligned fade and blur
+            const opacity = 0.10 + 0.35 * (1 - i / trail.length);
+            const blur = 0.5 + 1.5 * (i / trail.length);
+            t
+              .el
+              .style
+              .opacity = opacity;
+            t
+              .el
+              .style
+              .filter = `blur(${blur}px)`;
+            prevX = t.x;
+            prevY = t.y;
+          }
+          requestAnimationFrame(animate);
+        }
+        animate();
+      })();
+    </script>
+    <style>
+      .trail-dot-mousetrail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background: linear-gradient(90deg, #6c5ce7 0%, #00b894 100%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        will-change: transform, opacity, filter;
+      }
+      .main-dot-mousetrail {
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border: 2px solid #6c5ce7;
+        box-shadow: 0 0 4px #6c5ce7;
+      }
+    </style>
+    
   </body>
 </html>

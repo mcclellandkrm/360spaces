@@ -418,5 +418,89 @@
     });
 </script>
     </main>
+    
+    <div id="main-dot-mousetrail" class="trail-dot-mousetrail main-dot-mousetrail"></div>
+    <script>
+      (function () { // Hide on touch devices
+        if ('ontouchstart' in window) 
+          return;
+        
+        const NUM_TRAIL = 12; // Fewer dots for subtlety
+        const trail = [];
+        for (let i = 0; i < NUM_TRAIL; i++) {
+          const el = document.createElement('div');
+          el.className = 'trail-dot-mousetrail';
+          document.body.appendChild(el);
+          trail.push({
+            el,
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2
+          });
+        }
+        const mainDot = document.getElementById('main-dot-mousetrail');
+        let mouseX = window.innerWidth / 2,
+          mouseY = window.innerHeight / 2;
+        document.addEventListener('mousemove', e => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+        function animate() {
+          mainDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+          let prevX = mouseX,
+            prevY = mouseY;
+          for (let i = 0; i < trail.length; i++) {
+            const t = trail[i];
+            t.x += (prevX - t.x) * 0.25;
+            t.y += (prevY - t.y) * 0.25;
+            t
+              .el
+              .style
+              .transform = `translate(${
+              t.x
+            }px, ${
+              t.y
+            }px)`;
+            // Brand-aligned fade and blur
+            const opacity = 0.10 + 0.35 * (1 - i / trail.length);
+            const blur = 0.5 + 1.5 * (i / trail.length);
+            t
+              .el
+              .style
+              .opacity = opacity;
+            t
+              .el
+              .style
+              .filter = `blur(${blur}px)`;
+            prevX = t.x;
+            prevY = t.y;
+          }
+          requestAnimationFrame(animate);
+        }
+        animate();
+      })();
+    </script>
+    <style>
+      .trail-dot-mousetrail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background: linear-gradient(90deg, #6c5ce7 0%, #00b894 100%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        will-change: transform, opacity, filter;
+      }
+      .main-dot-mousetrail {
+        width: 3px;
+        height: 3px;
+        background: #fff;
+        border: 2px solid #6c5ce7;
+        box-shadow: 0 0 4px #6c5ce7;
+      }
+    </style>
+    
   </body>
 </html>

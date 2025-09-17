@@ -4321,9 +4321,9 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .quote-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #6c5ce7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
   line-height: 1;
   opacity: 0;
   transform: translateY(20px) rotate(-10deg);
@@ -4448,7 +4448,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   
   .quote-icon {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 }
 
@@ -6113,7 +6113,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 
 .focus-hero-title {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.1;
@@ -6173,7 +6173,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 700;
-  color: #232b36;
+  color: #7867c5;
   margin-bottom: 1rem;
 }
 
