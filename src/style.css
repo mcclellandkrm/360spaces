@@ -1,3 +1,79 @@
+/* Remove any white border or gap around the site */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}
+/* Responsive logo rail scroll speed */
+@media (max-width: 900px) {
+  .client-logos-list {
+    animation-duration: 20s !important;
+  }
+}
+@media (min-width: 901px) {
+  .client-logos-list {
+    animation-duration: 60s !important;
+  }
+}
+.client-showcase--light-bg .luxury-client-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #232b36 !important;
+}
+/* Dark text for Trusted By section heading/subtitle on light background */
+.client-showcase--light-bg .luxury-client-title {
+  color: #232b36 !important;
+}
+.client-showcase--light-bg .luxury-client-subtitle {
+  color: #444 !important;
+}
+/* Light background for Trusted By section */
+.client-showcase--light-bg {
+  background: #f8f9fa !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.client-showcase--light-bg .luxury-client-container {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  box-shadow: none !important;
+}
+
+/* Remove extra margin from header and stats in this section */
+.client-showcase--light-bg .luxury-client-header,
+.client-showcase--light-bg .luxury-client-stats {
+  margin: 0 !important;
+  padding: 0 0 2rem 0 !important;
+}
+/* Ensure correct font for hero section */
+.focus-hero-content {
+  font-family: var(--font-body);
+}
+.focus-hero-title {
+  font-family: var(--font-heading);
+}
+.focus-hero-description {
+  font-family: var(--font-body);
+}
+/* Ensure correct font for benefit cards */
+.focus-benefit-card {
+  font-family: var(--font-body);
+}
+.focus-benefit-card h3 {
+  font-family: var(--font-heading);
+}
+.focus-benefit-card p, .focus-benefit-card ul, .focus-benefit-card li {
+  font-family: var(--font-body);
+}
 /* Loom-style Project Panel Responsive Layout */
 .project-panel-loom {
   display: flex;
@@ -19,133 +95,9 @@
   background: #f8f9fa;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.project-panel-loom__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 0;
-  background: #f8f9fa;
-}
-@media (max-width: 900px) {
-  .project-panel-loom {
-    flex-direction: column;
-    max-width: 100%;
-  }
-  /* No extra image rules needed here */
-}
-.project-panel-loom__info {
-  flex: 1 1 0;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.project-category {
-  color: #58c4c5;
-  background: #f3fbfb;
-  border-radius: 1.2em;
-  padding: 0.25em 1.2em;
-  font-weight: 600;
-  font-size: 1.05em;
-  display: inline-block;
-  max-width: 320px;
-  margin-bottom: 1.2em;
-  letter-spacing: 0.04em;
-  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
-}
-
-.project-description {
-  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
-  font-size: clamp(0.9rem, 1.8vw, 1.125rem);
-  color: #4a5568;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-.project-features-list {
-  margin: 2rem 0;
-  padding: 0;
-  list-style: none;
-  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
-  line-height: 1.7;
-}
-.project-features-list li {
-  margin-bottom: 0.7em;
-  font-size: 1.05em;
-}
-.project-features-list strong {
-  color: #222;
-  font-weight: 600;
-}
-.project-status {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e9ecef;
-  font-family: 'WF Visual Sans', var(--font-body), sans-serif;
-}
-.status-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.status-badge.in-progress { background: #ffeaa7; color: #d63031; }
-.status-badge.planning { background: #a8e6cf; color: #00b894; }
-.status-badge.discovery { background: #dda0dd; color: #6c5ce7; }
-.project-timeline {
-  color: #6c757d;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-@media (max-width: 900px) {
-  .project-panel-loom {
-    flex-direction: column;
-    max-width: 100%;
-  }
-  /* Removed duplicate .project-panel-loom__image and img rules for clarity. Top-level rules now apply. */
-  .project-panel-loom__info {
-    padding: 1.5rem;
-  }
-}
-/* Responsive image container for project panels */
-.project-image-alt {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f8f9fa;
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  overflow: hidden;
-}
-
-.project-image-alt img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .project-image-alt {
-    height: 220px;
-    border-radius: 18px;
-    border-top-left-radius: 18px;
-    border-bottom-left-radius: 18px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
     margin-bottom: 1.5rem;
-  }
 }
 @font-face {
   font-family: 'WF Visual Sans';
@@ -1825,7 +1777,7 @@
 
 .luxury-stat-label {
   font-size: 0.9rem;
-  color: #76CCCE;
+  color: #ab46e1;
   text-transform: unset;
   letter-spacing: 0.05em;
 }
@@ -1944,7 +1896,7 @@
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
-  color: #ffffff;
+  color: #464444;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
   -webkit-background-clip: text;
@@ -2113,11 +2065,8 @@
   align-items: center;
   gap: 60px;
   padding: 40px 0;
-  background: rgba(24, 31, 46, 0.4);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(108, 92, 231, 0.1);
-  border-radius: var(--radius-panel);
   margin-top: 40px;
 }
 
@@ -2129,7 +2078,7 @@
   font-family: var(--font-heading);
   font-size: 2.5rem;
   font-weight: 500;
-  color: #2c67cb;
+  color: #2F2F65;
   margin-bottom: 8px;
   /* Commented out gradient to see the green color */
   /* background: linear-gradient(135deg, #6c5ce7 0%, #a78bfa 100%);
@@ -2141,7 +2090,7 @@
 .luxury-stat-label {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #2F2F65;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -2754,11 +2703,11 @@
 }
 .client-logos-marquee-fade--left {
   left: 0;
-  background: linear-gradient(to right, #131a26 0%, transparent 100%);
+  background: linear-gradient(to right, #131a26 0%, transparent 0%);
 }
 .client-logos-marquee-fade--right {
   right: 0;
-  background: linear-gradient(to left, #131a26 0%, transparent 100%);
+  background: linear-gradient(to left, #131a26 0%, transparent 0%);
 }
 .client-logos-list {
   display: flex;
@@ -2768,6 +2717,10 @@
   will-change: transform;
   padding: 0 2rem;
   min-width: 200%; /* Force enough width for scrolling */
+}
+/* Consolidated logo rail styles */
+.client-logos-list {
+  list-style: none;
 }
 
 @media (max-width: 900px) {
@@ -2832,7 +2785,7 @@
   }
 }
 .client-logos-section {
-  background: #131a26;
+  background: #c7c9cd01;
   padding: 2.5rem 0 2rem 0;
   position: relative;
   overflow: hidden;
@@ -2864,6 +2817,20 @@
   left: 0;
   width: 100%;
   height: 100%;
+@media (max-width: 900px) {
+  .client-logos-list {
+    gap: 2rem;
+    padding: 0 1rem;
+    animation-duration: 20s !important;
+  }
+  .client-logos-marquee-fade {
+    width: 40px;
+  }
+  .client-logos-list img {
+    height: 32px;
+    max-width: 80px;
+  }
+}
   z-index: 0;
 }
 
@@ -6350,6 +6317,7 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
 }
 
 .focus-benefits-header p {
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   color: #6c757d;
   max-width: 600px;
@@ -6403,8 +6371,6 @@ h1.heading-regular, h2.heading-regular, h3.heading-regular, h4.heading-regular, 
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 1.25rem;
