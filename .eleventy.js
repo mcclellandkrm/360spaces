@@ -2,9 +2,10 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/style.css");
   eleventyConfig.addPassthroughCopy("src/images");
-  
   eleventyConfig.addPassthroughCopy("src/video");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  // Copy all modular component CSS files to output
+  eleventyConfig.addPassthroughCopy({ "src/*.component.css": "." });
 
   return {
     dir: {

@@ -1,0 +1,99 @@
+/* Exact CSS for client logo section, extracted from dist/style.css */
+
+@media (max-width: 900px) {
+  .client-logos-list {
+    animation-duration: 20s !important;
+  }
+}
+@media (min-width: 901px) {
+  .client-logos-list {
+    animation-duration: 60s !important;
+  }
+}
+.client-showcase--light-bg .luxury-client-title {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #232b36 !important;
+}
+.client-showcase--light-bg .luxury-client-title {
+  color: #232b36 !important;
+}
+.client-showcase--light-bg .luxury-client-subtitle {
+  color: #444 !important;
+}
+.client-showcase--light-bg {
+  background: #f8f9fa !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+.client-showcase--light-bg .luxury-client-container {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  box-shadow: none !important;
+}
+.client-showcase--light-bg .luxury-client-header,
+.client-showcase--light-bg .luxury-client-stats {
+  margin: 0 !important;
+  padding: 0 0 2rem 0 !important;
+}
+.client-logos-list {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem;
+  animation: clientlogosComponentScroll 60s linear infinite;
+}
+@keyframes clientlogosComponentScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+.client-logos-list li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-logos-list img {
+  max-width: 100%;
+  max-height: 70px;
+  filter: grayscale(1) brightness(1.7);
+  opacity: 0.85;
+  transition: filter 0.2s, opacity 0.2s;
+  background: none;
+}
+.client-logos-list img:hover {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+}
+.luxury-client-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  font-family: var(--font-body);
+}
+.luxury-stat-item {
+  text-align: center;
+}
+.luxury-stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #232b36;
+}
+.luxury-stat-label {
+  font-size: 1.1rem;
+  color: #444;
+}
+.luxury-stat-divider {
+  width: 2px;
+  height: 2.5rem;
+  background: #e0e0e0;
+  margin: 0 1.5rem;
+}

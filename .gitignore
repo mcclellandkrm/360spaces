@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output (optional - you may want to commit dist/)
+# dist/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+.temp/
+
+# Claude Code
+.claude/
+
+# Old backups
+last_working_version_uploaded/
+
+# Graphics working files (optional - keep source files out of repo)
+*.psd
+*.ai
